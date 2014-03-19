@@ -170,6 +170,7 @@ nav ul {
 	margin-top: -196px;
 }
 nav li {
+	position: relative;
 	padding: 15px 0;
 	width: 60px;
 	/* background: rgba(255,255,255,0.95); */
@@ -178,6 +179,7 @@ nav li {
 	text-align: center;
 	/* border-bottom: 1px solid rgba(255,255,255,0.15); */
 	border-bottom: 1px solid rgba(255,255,255,.1);
+	overflow: hidden;
 }
 nav li:first-child {
 	border-top: 1px solid rgba(255,255,255,.1);
@@ -206,15 +208,32 @@ nav li a img {
 nav li:hover {
 	background: #4F5759;
 	-webkit-transition: 0.35s all;
+	border-color: transparent;
+	overflow: visible;
 }
 nav li.active a img,
 nav li:hover a img {
 	opacity: 1;
 }
 nav li a span {
-	display: none;
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: 60px;
+	background: #008FCC;
+	line-height: 60px;
+	padding: 0 20px;
+	font-weight: bold;
 	-webkit-transition: 0.35s all;
 	-webkit-font-smoothing: antialiased;
+	opacity: 0;
+	-webkit-transform: translate3d(60px,0,0);
+	-webkit-backface-visibilty: hidden;
+	text-transform: uppercase;
+}
+nav li:hover a span {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
 }
 
 
