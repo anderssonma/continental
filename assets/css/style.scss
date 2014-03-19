@@ -173,6 +173,7 @@ nav li {
 	position: relative;
 	padding: 15px 0;
 	width: 60px;
+	height: 60px;
 	/* background: rgba(255,255,255,0.95); */
 	/* background: rgba(0,0,0,0.95); */
 	-webkit-transition: 0.5s margin;
@@ -220,9 +221,9 @@ nav li a span {
 	top: -1px;
 	bottom: -1px;
 	left: 60px;
-	background: #008FCC;
 	line-height: 60px;
-	padding: 0 20px;
+	background: #008FCC;
+	padding: 0 25px;
 	font-weight: bold;
 	-webkit-transition: 0.35s all;
 	-webkit-font-smoothing: antialiased;
@@ -230,6 +231,19 @@ nav li a span {
 	-webkit-transform: translate3d(60px,0,0);
 	-webkit-backface-visibilty: hidden;
 	text-transform: uppercase;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		margin-top: -7px;
+		left: -10px;
+		display: block;
+		width: 0; 
+		height: 0; 
+		border-top: 8px solid transparent;
+		border-bottom: 8px solid transparent;
+		border-right: 10px solid #008FCC;
+	}
 }
 nav li:hover a span {
 	opacity: 1;
