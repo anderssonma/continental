@@ -1,3 +1,7 @@
+$text-dark: #333;
+$text-dark-alt: #555;
+$text-light: #FFF;
+
 @font-face {
   font-family: 'caslon-graphique';
   src: url('../fonts/caslongraphiqueforgarbergs-webfont.eot');
@@ -58,19 +62,37 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'caslon-graphique';
+	color: $text-dark;
+	-webkit-font-smoothing: antialiased;
 }
 
 h3 {
 	font-size: 46px;
 	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	color: #333;
 }
+
+// H2 ARE ONLY USED ON FULL-SCREEN IMG SEPARATORS
+h2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	height: 140px;
+	display: block;
+	color: $text-light;
+	font-size: 120px;
+	/* -webkit-transform: translateY(-50%) translateX(-50%); */
+	margin: -70px 0 0;
+	text-shadow: 0 1px 0 #999;
+	font-weight: normal;
+	letter-spacing: 2px;
+	opacity: 1;
+}
+
 h4 {
 	font-size: 32px;
 	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	color: #333;
 	margin: 80px 0 16px;
 	text-align: center;
 }
@@ -78,7 +100,7 @@ h4 {
 p {
 	font-size: 18px;
 	-webkit-font-smoothing: antialiased;
-	color: #333;
+	color: $text-dark-alt;
 	line-height: 1.5;
 }
 
@@ -500,30 +522,14 @@ nav li:hover a span {
 	background-size: cover;
 }
 
-h2 {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	height: 140px;
-	display: block;
-	color: #FFF;
-	-webkit-font-smoothing: antialiased;
-	font-size: 120px;
-	/* -webkit-transform: translateY(-50%) translateX(-50%); */
-	margin: -70px 0 0;
-	text-shadow: 0 1px 0 #999;
-	-webkit-filter: none;
-	font-weight: normal;
-	letter-spacing: 2px;
-	opacity: 1;
-}
 
 .quote {
 	height: 340px !important;
 	.bg, .inner {
 		height: 340px !important;
+	}
+	.inner {
+		width: 800px !important;
 	}
 	i {
 		font-family: Merriweather;
@@ -536,7 +542,7 @@ h2 {
 		text-align: left;
 		background: none;
 		border: none;
-		margin-top: 20px;
+		margin-top: 16px;
 		border-bottom: 1px solid rgba(255,255,255,.5);
 	}
 	span {
@@ -545,8 +551,8 @@ h2 {
 		color: #FFF;
 		-webkit-font-smoothing: antialiased;
 		text-transform: uppercase;
-		font-size: 14px;
-		margin-top: 20px;
+		font-size: 13px;
+		margin-top: 14px;
 		font-weight: bold;
 		opacity: 0.5;
 	}
@@ -1006,57 +1012,71 @@ blockquote {
 .downloads {
 	width: 820px;
 	margin-left: -10px;
-	overflow: hidden
-}
-.files {
-	width: 390px;
 	overflow: hidden;
-	margin: 10px;
-	float: left;
-	background: #FFF;
 }
-.files .preview {
-	width: 84px;
-	height: 80px;
-	background: rgba(0,0,0,.25);
-	background: #FFF;
-	border-right: 4px solid #F5F5F5;
+
+.downloads, .press {
+	h4 {
+		margin-bottom: 30px;
+	}
+}
+
+.files {
+	width: 402px;
+	overflow: hidden;
+	margin: 0 4px 8px;
 	float: left;
-	/*
-	line-height: 80px;
-	text-align: center;
-	font-weight: bold;
-	font-size: 30px;
-	color: rgba(255,255,255,1);
-	-webkit-font-smoothing: antialiased;
-	-webkit-transform: rotate(90deg);
-	*/
+	background: #FFF;
+	cursor: pointer;
+	.preview {
+		width: 84px;
+		height: 80px;
+		background: rgba(0,0,0,.25);
+		background: #FFF;
+		border-right: 4px solid #F5F5F5;
+		float: left;
+		-webkit-transition: 0.35s all;
+		/*
+		line-height: 80px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 30px;
+		color: rgba(255,255,255,1);
+		-webkit-font-smoothing: antialiased;
+		-webkit-transform: rotate(90deg);
+		*/
+	}
+	&:hover .preview {
+		background: #008FCC;
+	}
 	img {
 		width: 40px;
 		margin: 21px 0 0 21px;
 	}
-}
+	&:hover img {
+		-webkit-filter: brightness(0%) invert(100%);
+	}
 
-.files .meta {
-	width: 306px;
-	float: right;
-	border: 3px solid #FFF;
-	border-left: none;
-	height: 80px;
-	padding-left: 26px;
-}
-.files h5 {
-	font-family: 'bau';
-	font-size: 16px;
-	margin: 18px 0 3px;
-	color: #333;
-	font-weight: normal
-}
-.files p {
-	margin: 0;
-	font-size: 13px;
-	font-family: 'Merriweather';
-	color: #666;
+	.meta {
+		width: 306px;
+		float: right;
+		border: 3px solid #FFF;
+		border-left: none;
+		height: 80px;
+		padding-left: 26px;
+	}
+	h5 {
+		font-family: 'bau';
+		font-size: 16px;
+		margin: 18px 0 3px;
+		font-weight: normal
+	}
+	p {
+		margin: 0;
+		font-size: 13px;
+		font-family: 'Merriweather';
+		color: $text-dark-alt;
+	}
 }
 
 .press {
@@ -1071,14 +1091,19 @@ blockquote {
 .questions {
 	width: 100%;
 }
-.answer h5 {
-	font-family: 'bau';
-	font-size: 18px;
-	margin: 0 0 6px;
-}
-.answer p {
-	margin: 0 0 24px;
-	font-size: 16px;
+.answer {
+	background: #FFF;
+	padding: 40px 40px 10px;
+	margin-bottom: 4px;
+	h5 {
+		font-family: 'bau';
+		font-size: 18px;
+		margin: 0 0 6px;
+	}
+	p {
+		margin: 0 0 24px;
+		font-size: 16px;
+	}
 }
 
 
