@@ -1016,21 +1016,29 @@ blockquote {
 	background: #FFF;
 }
 .files .preview {
-	width: 80px;
+	width: 84px;
 	height: 80px;
 	background: rgba(0,0,0,.25);
+	background: #FFF;
+	border-right: 4px solid #F5F5F5;
+	float: left;
+	/*
 	line-height: 80px;
 	text-align: center;
 	font-weight: bold;
 	font-size: 30px;
 	color: rgba(255,255,255,1);
 	-webkit-font-smoothing: antialiased;
-	float: left;
 	-webkit-transform: rotate(90deg);
+	*/
+	img {
+		width: 40px;
+		margin: 21px 0 0 21px;
+	}
 }
 
 .files .meta {
-	width: 310px;
+	width: 306px;
 	float: right;
 	border: 3px solid #FFF;
 	border-left: none;
