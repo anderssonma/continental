@@ -2,6 +2,8 @@ $text-dark: #333;
 $text-dark-alt: #555;
 $text-light: #FFF;
 
+$blue-color: #008FCC;
+
 @font-face {
   font-family: 'caslon-graphique';
   src: url('../fonts/caslongraphiqueforgarbergs-webfont.eot');
@@ -160,8 +162,10 @@ nav {
 	bottom: 0;
 	z-index: 10;
 	width: 60px;
+	/*
 	background: linear-gradient(to bottom, #004494 0%, #1FBAE9 100%);
 	background: #383D3F;
+	*/
 	-webkit-animation: 0.35s 0.5s menuIn ease-out forwards;
 }
 
@@ -224,7 +228,7 @@ nav li a img {
 	text-align: center;
 	-webkit-transition: 0.35s all;
 	width: 32px;
-	-webkit-filter: invert(100%);
+	-webkit-filter: invert(0%);
 	opacity: 0.75;
 }
 
@@ -996,6 +1000,8 @@ blockquote {
 
 
 
+
+
 .gallery {
 	width: 1000px;
 	margin: 0 auto 0 -100px;
@@ -1009,10 +1015,21 @@ blockquote {
 	cursor: -webkit-zoom-in;
 }
 
-.downloads {
-	width: 820px;
-	margin-left: -10px;
+
+
+
+.media {
+	width: 1000px;
+	margin-left: -100px;
 	overflow: hidden;
+	h4 {
+		margin-top: 0;
+	}
+}
+.downloads {
+	width: 410px;
+	overflow: hidden;
+	float: right;
 }
 
 .downloads, .press {
@@ -1021,10 +1038,15 @@ blockquote {
 	}
 }
 
+.press {
+	width: 580px;
+	float: left;
+}
+
 .files {
 	width: 402px;
 	overflow: hidden;
-	margin: 0 4px 8px;
+	margin: 0 4px 6px;
 	float: left;
 	background: #FFF;
 	cursor: pointer;
@@ -1033,7 +1055,7 @@ blockquote {
 		height: 80px;
 		background: rgba(0,0,0,.25);
 		background: #FFF;
-		border-right: 4px solid #F5F5F5;
+		border-right: 2px solid #F5F5F5;
 		float: left;
 		-webkit-transition: 0.35s all;
 		/*
@@ -1058,7 +1080,7 @@ blockquote {
 	}
 
 	.meta {
-		width: 306px;
+		width: 318px;
 		float: right;
 		border: 3px solid #FFF;
 		border-left: none;
@@ -1079,10 +1101,6 @@ blockquote {
 	}
 }
 
-.press {
-	width: 800px;
-	overflow: hidden;
-}
 
 .press .downloads h4 {
 	margin-bottom: 38px;
@@ -1094,7 +1112,7 @@ blockquote {
 .answer {
 	background: #FFF;
 	padding: 40px 40px 10px;
-	margin-bottom: 4px;
+	margin-bottom: 6px;
 	h5 {
 		font-family: 'bau';
 		font-size: 18px;
@@ -1120,9 +1138,11 @@ blockquote {
 .contact .person {
 	float: left;
 	overflow: hidden;
-	width: 320px;
-	margin-bottom: 30px;
-	margin-right: 20px;
+	width: 324px;
+	margin-bottom: 14px;
+	margin-right: 14px;
+	background: #FFF;
+	padding: 25px;
 }
 .contact .person.last {
 	margin-right: 0;
@@ -1136,29 +1156,44 @@ blockquote {
 }
 .contact .inner {
 	width: 240px;
-	height: 120px;
 	border-left: none;
 	float: left;
 }
 
 .contact h6 {
-	font-size: 18px;
+	font-size: 16px;
 	font-family: 'bau';
 	-webkit-font-smoothing: antialiased;
 	color: #333;
 	line-height: 26px;
-	margin: 15px 0 12px 0;
+	margin: 0 0 12px 0;
 }
+
 .contact span,
 .contact a {
 	color: #333;
 	display: block;
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
 }
+
+.contact h6 span {
+	font-family: 'Merriweather';
+	color: $text-dark-alt;
+	font-size: 12px;
+	
+	line-height: 16px;
+	i {
+		font-size: 10px;
+		text-transform: uppercase;
+		font-style: normal;
+		display: block;
+	}
+}
+
 .contact a {
-	color: #888;
+	color: #555;
 	text-decoration: none;
 	margin-top: 4px;
 }
