@@ -49,6 +49,8 @@ body, html, input {
 	height: 100%;
 	font-family: 'bau';
 }
+
+
 img {
 	/* width: 100%; */
 	display: block;
@@ -485,12 +487,46 @@ h2 {
 	opacity: 1;
 }
 
+.quote {
+	height: 340px !important;
+	.bg, .inner {
+		height: 340px !important;
+	}
+	i {
+		font-family: Merriweather;
+		color: #FFF;
+		font-size: 26px;
+		-webkit-font-smoothing: antialiased;
+	}
+	hr {
+		width: 140px;
+		text-align: left;
+		background: none;
+		border: none;
+		margin-top: 20px;
+		border-bottom: 1px solid rgba(255,255,255,.5);
+	}
+	span {
+		text-align: center;
+		display: block;
+		color: #FFF;
+		-webkit-font-smoothing: antialiased;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin-top: 20px;
+		font-weight: bold;
+		opacity: 0.5;
+	}
+}
 
+.alt-bg {
+	width: 100%;
+	background: #F5F5F5;
+}
 .sep {
 	width: 800px;
 	margin: 0 auto;
 	padding: 100px 0 200px;
-	background: #FFFFFF;
 }
 
 .sep h3 {
@@ -693,20 +729,21 @@ blockquote {
 	width: 500px;
 	height: 400px;
 	float: left;
-	border-right: 2px solid #CCC;
+	// border-right: 2px solid #F5F5F5;
 	position: relative;
 	padding: 100px;
+	background: #FFF;
 }
 .grid .square-left {
 	border: none;
-	border-left: 2px solid #CCC;
+	// border-left: 2px solid #F5F5F5;
 }
 
 .grid .square-first {
-	border-top: 2px solid #CCC;
+	// border-top: 2px solid #F5F5F5;
 }
 .grid .square-last {
-	border-bottom: 2px solid #CCC;
+	// border-bottom: 2px solid #F5F5F5;
 }
 
 .grid .square .arrow {
@@ -733,11 +770,11 @@ blockquote {
 	width: 80%;
 	margin-left: 10%;
 	margin-bottom: 0;
-	margin-top: 20px;
+	margin-top: 26px;
 	font-family: 'bau';
-	color: #333;
+	color: #383D3F;
 	text-align: center;
-	
+	-webkit-font-smoothing: antialiased;
 	font-size: 20px;
 	/*
 	margin-bottom: 20px;
@@ -755,6 +792,7 @@ blockquote {
 	font-size: 16px;
 	text-align: center;
 	font-family: 'Merriweather';
+	color: #555;
 }
 .grid ul {
 	list-style: none;
@@ -769,7 +807,8 @@ blockquote {
 .grid hr {
 	margin-top: 16px;
 	width: 80%;
-	background: rgba(0,0,0,0.25);
+	border-bottom: 1px solid #2A95CB;
+	opacity: 0.75;
 }
 
 /*
@@ -871,7 +910,7 @@ blockquote {
 	-webkit-transition: 0.35s all;
 }
 .timestamp h6 {
-	color: #2A95CB;
+	color: #333;
 	font-family: 'bau';
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
@@ -924,10 +963,10 @@ blockquote {
 	overflow: hidden;
 }
 .gallery img {
-	width: 25%;
+	width: 50%;
 	float: left;
-	height: 170px;
-	border: 2px solid #FFF;
+	height: 360px;
+	//border: 2px solid #FFF;
 	cursor: -webkit-zoom-in;
 }
 
@@ -940,12 +979,13 @@ blockquote {
 	width: 390px;
 	overflow: hidden;
 	margin: 10px;
-	float: left
+	float: left;
+	background: #FFF;
 }
 .files .preview {
 	width: 80px;
 	height: 80px;
-	background: #F2F2F2;
+	background: rgba(0,0,0,.25);
 	line-height: 80px;
 	text-align: center;
 	font-weight: bold;
@@ -959,7 +999,7 @@ blockquote {
 .files .meta {
 	width: 310px;
 	float: right;
-	border: 3px solid rgba(0,0,0,0.05);
+	border: 3px solid #FFF;
 	border-left: none;
 	height: 80px;
 	padding-left: 26px;
@@ -1005,7 +1045,6 @@ blockquote {
 .contact {
 	overflow: hidden;
 	width: 100%;
-	background: #F8F8F8;
 	padding: 80px;
 }
 .contact .wrapper {
@@ -1197,7 +1236,6 @@ footer {
 	background: #111;
 	height: auto;
 	overflow: hidden;
-	z-index: 20;
 }
 footer .gradient {
 	width: 100%;
