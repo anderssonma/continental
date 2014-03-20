@@ -864,7 +864,7 @@ blockquote {
 
 .timeline {
 	width: 800px;
-	height: 740px;
+	height: 640px;
 	position: relative;
 	margin: 70px 0 200px 0;
 }
@@ -886,40 +886,40 @@ blockquote {
 
 
 .timeline .ts-2 {
-	top: 80px;
+	top: 70px;
 }
 .timeline .ts-3 {
-	top: 160px;
+	top: 140px;
 }
 .timeline .ts-4 {
-	top: 240px;
+	top: 220px;
 }
 .timeline .ts-5 {
-	top: 320px;
+	top: 280px;
 }
 .timeline .ts-6 {
-	top: 400px;
+	top: 380px;
 }
 .timeline .ts-7 {
-	top: 480px;
+	top: 420px;
 }
 .timeline .ts-8 {
-	top: 560px;
+	top: 510px;
 }
 .timeline .ts-9 {
-	top: 640px;
+	top: 580px;
 }
 .timeline .ts-10 {
-	top: 720px;
+	top: 640px;
 }
 
 .timestamp .mark {
 	position: absolute;
 	top: 0;
-	right: -10px;
-	width: 20px;
-	height: 20px;
-	margin-left: -10px;
+	right: -8px;
+	width: 16px;
+	height: 16px;
+	margin-left: -8px;
 	background: #FFF;
 	border-radius: 100%;
 	border: 2px solid rgba(0,0,0,0.1);
@@ -933,19 +933,21 @@ blockquote {
 	-webkit-font-smoothing: antialiased;
 }
 
+/*
 .timestamp .mark:after {
 	position: absolute;
 	top: 50%;
-	left: -6px;
-	margin-top: -6px;
+	left: -5px;
+	margin-top: -5px;
 	content: '';
 	display: block;
 	width: 0; 
 	height: 0; 
-	border-top: 6px solid transparent;
-	border-bottom: 6px solid transparent;
-	border-right: 6px solid #E5E5E5;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid #E5E5E5;
 }
+*/
 
 .timestamp h5 {
 	font-family: 'bau';
