@@ -128,7 +128,7 @@ p.ingress {
 	bottom: 0;
 	background: rgba(0,0,0,.85);
 	z-index: 99;
-	display: none;
+	display: block;
 }
 .spotify #spotify-close {
 	position: absolute;
@@ -174,6 +174,7 @@ nav {
 	background: #383D3F;
 	*/
 	-webkit-animation: 0.35s 0.5s menuIn ease-out forwards;
+	background: linear-gradient(to top, #004494 0%, #1FBAE9 100%);
 }
 
 
@@ -202,6 +203,7 @@ nav ul {
 	position: absolute;
 	top: 50%;
 	margin-top: -196px;
+	
 }
 nav li {
 	position: relative;
@@ -236,7 +238,7 @@ nav li a img {
 	text-align: center;
 	-webkit-transition: 0.35s all;
 	width: 32px;
-	-webkit-filter: invert(0%);
+	-webkit-filter: invert(100%);
 	opacity: 0.75;
 }
 
@@ -760,6 +762,49 @@ blockquote {
 	left: 0;
 	z-index: 1000;
 }
+
+
+
+
+
+.overlays {
+	width: 1000px;
+	margin-left: -100px;
+	.box {
+		width: 100%;
+		height: 600px;
+		overflow: hidden;
+		&.box-location {
+			background: url(../img/vy_vasag_1440.jpg) no-repeat bottom center;
+			background-size: cover;
+			.overlay {
+				float: right;
+				margin: 50px 50px 0 0;
+			}
+		}
+		&.box-social {
+			background: url(../img/vy_takt_1440.jpg) no-repeat center;
+			background-size: cover;
+			
+		}
+	}
+	.overlay {
+		width: 700px;
+		background: rgba(255,255,255,1);
+		margin: 50px 0 0 50px;
+		padding: 50px;
+		h5 {
+			font-size: 20px;
+			font-family: 'bau';
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+
 
 
 .grid {
