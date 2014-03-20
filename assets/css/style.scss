@@ -168,7 +168,7 @@ p.ingress {
 nav {
 	position: fixed;
 	top: 0px;
-	left: -80px;
+	left: 0px;
 	bottom: 0;
 	z-index: 10;
 	width: 60px;
@@ -176,19 +176,9 @@ nav {
 	background: linear-gradient(to bottom, #004494 0%, #1FBAE9 100%);
 	background: #383D3F;
 	*/
-	-webkit-animation: 0.35s 0.5s menuIn ease-out forwards;
 	background: linear-gradient(to top, #004494 0%, #1FBAE9 100%);
 }
 
-
-@-webkit-keyframes menuIn {
-	from {
-		-webkit-transform: translateX(0);
-	}
-	to {
-		-webkit-transform: translateX(80px);
-	}
-}
 nav > img {
 	margin: 25px 0 40px 7px;
 	width: 100px;
