@@ -239,11 +239,11 @@ nav li a img {
 	-webkit-transition: 0.35s all;
 	width: 32px;
 	-webkit-filter: invert(100%);
-	opacity: 0.75;
+	opacity: 0.5;
 }
 
 nav li:hover {
-	background: #4F5759;
+	background: rgba(255,255,255,.25);
 	-webkit-transition: 0.35s all;
 	border-color: transparent;
 	overflow: visible;
@@ -254,11 +254,11 @@ nav li:hover a img {
 }
 nav li a span {
 	position: absolute;
-	top: -1px;
+	top: 0;
 	bottom: -1px;
 	left: 60px;
 	line-height: 60px;
-	background: #008FCC;
+	background: #333;
 	padding: 0 25px;
 	font-weight: bold;
 	-webkit-transition: 0.35s all;
@@ -267,6 +267,7 @@ nav li a span {
 	-webkit-transform: translate3d(60px,0,0);
 	-webkit-backface-visibilty: hidden;
 	text-transform: uppercase;
+	color: #FFF;
 	&:before {
 		content: '';
 		position: absolute;
@@ -278,7 +279,7 @@ nav li a span {
 		height: 0; 
 		border-top: 8px solid transparent;
 		border-bottom: 8px solid transparent;
-		border-right: 10px solid #008FCC;
+		border-right: 10px solid #333;
 	}
 }
 nav li:hover a span {
