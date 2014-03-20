@@ -32,7 +32,6 @@ body.form-active canvas {
 
 .pano-bg {
 	background: #000;
-	background: linear-gradient(to right, #004494 0%, #1FBAE9 100%);
 }
 #pano {
 	/* cursor: url(../Images/hand_grip_s.png) 10 10, move; */
@@ -44,10 +43,11 @@ body.form-active canvas {
 	cursor: -moz-grab;
 	cursor: grab;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-	opacity: 0.5;
+	opacity: 0.75;
 	-webkit-transition: 0.5s opacity;
 	transition: 0.5s opacity;
-	-webkit-filter: hue-rotate(-20deg) grayscale(80%) brightness(50%);
+	-webkit-filter: hue-rotate(-20deg);
+	/*-webkit-filter: hue-rotate(-20deg) grayscale(80%) brightness(50%); */
 }
 #pano #krpanoSWFObject {
 	display: block;
