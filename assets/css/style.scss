@@ -1025,7 +1025,7 @@ blockquote {
 
 .media {
 	width: 1000px;
-	margin-left: -100px;
+	margin: 20px auto 100px;
 	overflow: hidden;
 	h4 {
 		margin-top: 0;
@@ -1153,12 +1153,6 @@ blockquote {
 	margin-right: 0;
 }
 
-.contact img {
-	width: 140px;
-	height: 140px;
-	float: left;
-	border-radius: 100%;
-}
 .contact .inner {
 	width: 240px;
 	border-left: none;
