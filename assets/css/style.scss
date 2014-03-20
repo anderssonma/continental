@@ -533,6 +533,9 @@ nav li:hover a span {
 
 .quote {
 	height: 340px !important;
+	width: 1200px !important;
+	margin: 0 auto;
+	margin-bottom: 8px;
 	.bg, .inner {
 		height: 340px !important;
 	}
@@ -540,7 +543,7 @@ nav li:hover a span {
 		width: 800px !important;
 	}
 	i {
-		font-family: Merriweather;
+		font-family: 'Merriweather', 'bau', serif;
 		color: #FFF;
 		font-size: 26px;
 		-webkit-font-smoothing: antialiased;
@@ -760,11 +763,13 @@ blockquote {
 
 
 
-
+.intro-split {
+	padding: 0 0 150px;
+}
 
 .overlays {
-	width: 1000px;
-	margin-left: -100px;
+	width: 1200px;
+	margin-left: -200px;
 	.box {
 		width: 100%;
 		height: 600px;
@@ -778,14 +783,15 @@ blockquote {
 			}
 		}
 		&.box-social {
-			background: url(../img/vy_takt_1440.jpg) no-repeat center;
+			background: url(../img/vy_takt_1440.jpg) no-repeat bottom center;
 			background-size: cover;
 			
 		}
 	}
 	.overlay {
+		display: none;
 		width: 700px;
-		background: rgba(255,255,255,1);
+		background: #F5F5F5;
 		margin: 50px 0 0 50px;
 		padding: 50px;
 		h5 {
@@ -794,6 +800,68 @@ blockquote {
 		}
 		p {
 			font-size: 18px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.split-mid {
+	width: 1200px;
+	margin: 0 0 0 -200px;
+	position: relative;
+	z-index: 1;
+	height: 350px;
+	background: #F5F5F5;
+	background: linear-gradient(to top, #F6D8D6 0%, #322C2E 100%);
+	.box {
+		position: absolute;
+		padding: 100px;
+		width: 596px;
+		height: 500px;
+		background: #FFF;
+		text-align: center;
+		top: -150px;
+		left: 0;
+		&:last-child {
+			top: 0;
+			right: 0;
+			left: auto;
+			&:after {
+				display: none;
+				position: absolute;
+				left: 50%;
+				bottom: -30px;
+				margin-left: -15px;
+				content: '';
+				width: 0; 
+				height: 0; 
+				border-right: 22px solid transparent;
+				border-left: 22px solid transparent;
+				border-top: 30px solid #FFF;
+			}
+		}
+		&:first-child {
+			&:before {
+				display: none;
+				position: absolute;
+				left: 50%;
+				top: -30px;
+				margin-left: -15px;
+				content: '';
+				width: 0; 
+				height: 0; 
+				border-right: 22px solid transparent;
+				border-left: 22px solid transparent;
+				border-bottom: 30px solid #FFF;
+			}
+		}
+		h5 {
+			font-size: 20px;
+			font-family: 'bau';
+			margin-bottom: 30px;
+		}
+		p {
+			font-size: 17px;
 			margin-bottom: 0;
 		}
 	}
