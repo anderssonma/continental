@@ -56,6 +56,10 @@ body, html, input {
 	font-family: 'bau';
 }
 
+body {
+	margin-left: 60px;
+}
+
 
 img {
 	/* width: 100%; */
@@ -109,7 +113,6 @@ p {
 p.ingress {
 	color: $text-dark;
 	font-size: 22px;
-	font-family: Merriweather;
 	margin: 16px 0 0;
 }
 
@@ -660,7 +663,6 @@ nav li:hover a span {
 }
 
 .sep figcaption {
-	font-family: 'Merriweather';
 	font-weight: 300;
 	font-style: italic;
 	color: #777776;
@@ -730,6 +732,7 @@ figure .figcaption-bg .gradient {
 	opacity: 0.5;
 }
 
+/* PROBABLY SAFE TO DEL
 blockquote {
 	font-family: 'Merriweather';
 	font-weight: 300;
@@ -745,6 +748,7 @@ blockquote {
 	border-width: 0 0 0 4px;
   -webkit-border-image: -webkit-linear-gradient(#00B8E6, #003091) 1 100%;
 }
+*/
 
 .peek {
 	width: 800px;
@@ -820,7 +824,6 @@ blockquote {
 	h6 {
 		position: relative;
 		color: $text-dark;
-		font-family: 'Merriweather';
 		font-weight: normal;
 		text-align: center;
 		font-size: 20px;
@@ -941,14 +944,12 @@ blockquote {
 .grid p{
 	font-size: 16px;
 	text-align: center;
-	font-family: 'Merriweather';
 	color: #555;
 }
 .grid ul {
 	list-style: none;
 }
 .grid li {
-	font-family: 'Merriweather';
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	color: #555;
@@ -1126,6 +1127,7 @@ blockquote {
 	height: 360px;
 	//border: 2px solid #FFF;
 	cursor: -webkit-zoom-in;
+	-webkit-filter: hue-rotate(-20deg);
 }
 
 
@@ -1209,7 +1211,6 @@ blockquote {
 	p {
 		margin: 0;
 		font-size: 13px;
-		font-family: 'Merriweather';
 		color: $text-dark-alt;
 	}
 }
@@ -1286,7 +1287,6 @@ blockquote {
 }
 
 .contact h6 span {
-	font-family: 'Merriweather';
 	color: $text-dark-alt;
 	font-size: 12px;
 	
