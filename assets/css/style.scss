@@ -106,6 +106,13 @@ p {
 	line-height: 1.5;
 }
 
+p.ingress {
+	color: $text-dark;
+	font-size: 22px;
+	font-family: Merriweather;
+	margin: 16px 0 0;
+}
+
 #svg-anim {
 	width: 100px;
 	height: 100px;
@@ -572,9 +579,6 @@ nav li:hover a span {
 	padding: 100px 0;
 }
 
-.sep h3 {
-	text-align: center;
-}
 .sep hr {
 	width: 33%;
 	margin-top: 20px;
