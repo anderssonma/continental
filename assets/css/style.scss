@@ -517,8 +517,7 @@ nav li:hover a span {
 .quote {
 	height: 340px !important;
 	width: 1200px !important;
-	margin: 0 auto;
-	margin-bottom: 8px;
+	margin: 0 0 8px -200px;
 	.bg, .inner {
 		height: 340px !important;
 	}
@@ -558,20 +557,15 @@ nav li:hover a span {
 	width: 800px;
 	margin: 0 auto;
 	padding: 100px 0;
+	&.sep-130 {
+		padding: 130px 0;
+	}
 	&.sep-top-40 {
 		padding-top: 40px;
 	}
 	&.sep-bot-130 {
 		padding-bottom: 130px;
 	}
-}
-
-.sep hr {
-	width: 33%;
-	margin-top: 20px;
-	height: 1px;
-	border: none;
-	background: linear-gradient(to right, #003091 0%,#00B8E6 100%);
 }
 
 /*
@@ -748,11 +742,6 @@ blockquote {
 	z-index: 1000;
 }
 
-
-
-.intro-split {
-	padding: 0 0 150px;
-}
 
 .overlays {
 	width: 1200px;
@@ -1414,16 +1403,12 @@ blockquote {
 	margin-right: 14px;
 	background: #FFF;
 	padding: 25px;
+	position: relative;
 }
 .contact .person.last {
 	margin-right: 0;
 }
 
-.contact .inner {
-	width: 240px;
-	border-left: none;
-	float: left;
-}
 
 .contact h6 {
 	font-size: 16px;
@@ -1436,7 +1421,7 @@ blockquote {
 
 .contact span,
 .contact a {
-	color: #333;
+	color: $text-dark-alt;
 	display: block;
 	font-weight: normal;
 	font-size: 14px;
@@ -1457,9 +1442,9 @@ blockquote {
 }
 
 .contact a {
-	color: #555;
+	color: #999;
 	text-decoration: none;
-	margin-top: 4px;
+	margin-top: 2px;
 }
 .contact h4 {
 	margin: 0 0 40px 0;
@@ -1495,8 +1480,8 @@ blockquote {
 	font-family: 'bau';
 	text-transform: uppercase;
 	color: #FFF;
-	width: 330px;
-	font-size: 16px;
+	width: 400px;
+	font-size: 18px;
 	float: left;
 	-webkit-font-smoothing: antialiased;
 }
@@ -1505,7 +1490,7 @@ blockquote {
 	text-transform: none;
 	display: block;
 	margin-top: 2px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .newsletter input {
@@ -1516,8 +1501,8 @@ blockquote {
 .newsletter input[type="email"] {
 	background: #F8F8F8;
 	border: none;
-	padding: 14px 20px 13px;
-	font-size: 14px;
+	padding: 12px 20px;
+	font-size: 16px;
 	width: 380px;
 	margin: 0;
 	color: #333;
