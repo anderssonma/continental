@@ -886,15 +886,14 @@ blockquote {
 }
 
 
-table {
+.train-table {
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 	margin: 60px 0;
 	color: $text-dark;
 	td {
 		width: 30%;
-		border-top: 1px solid #F1F1F1;
-		padding: 20px 0;
+		padding: 15px 0;
 		span {
 			color: $text-dark-alt;
 			text-transform: uppercase;
@@ -902,6 +901,9 @@ table {
 			display: inline-block;
 			margin-left: 4px;
 		}
+	}
+	tbody tr {
+		border-top: 1px solid #F1F1F1;
 	}
 	tr td:first-child {
 		width: 40%;
