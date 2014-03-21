@@ -1221,17 +1221,24 @@ table {
 .gallery {
 	width: 1000px;
 	margin: 0 auto 0 -100px;
-	overflow: hidden;
 }
 .gallery img {
+	position: relative;
 	width: 50%;
 	float: left;
 	height: 360px;
 	//border: 2px solid #FFF;
 	cursor: -webkit-zoom-in;
-	-webkit-filter: hue-rotate(-20deg);
 }
 
+.gallery .zoom-img-wrap {
+	position: relative;
+	z-index: 900;
+
+		&.front {
+		z-index: 999;
+	}
+}
 
 
 
