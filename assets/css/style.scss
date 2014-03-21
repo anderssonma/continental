@@ -326,29 +326,6 @@ nav li:hover a span {
 
 
 
-.intro img {
-	width: 100%;
-}
-
-.intro h1 {
-	font-size: 70px;
-	text-align: center;
-	color: #FFF;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	text-shadow: 0 1px 0 #666;
-	line-height: 66px;
-}
-
-
-.intro .text {
-	position: absolute;
-	top: 140px;
-	left: 50%;
-	width: 500px;
-	-webkit-transform: translateX(-50%);	
-}
-
 
 /* PUZZLE TILES */
 .puzzle-tiles {
@@ -538,12 +515,12 @@ nav li:hover a span {
 
 
 .quote {
-	height: 340px !important;
+	height: 300px !important;
 	width: 1200px !important;
 	margin: 0 auto;
 	margin-bottom: 8px;
 	.bg, .inner {
-		height: 340px !important;
+		height: 300px !important;
 	}
 	.inner {
 		width: 800px !important;
@@ -917,6 +894,63 @@ blockquote {
 }
 
 
+.live-grid {
+	width: 1200px;
+	margin: 100px 0 0 -200px;
+	overflow: hidden;
+	.backdrop {
+		position: relative;
+	}
+	.box.transp {
+		position: absolute;
+		width: 500px;
+		top: 40px;
+		left: 50px;
+		padding-right: 0;
+		h5, p {
+			color: #FFF;
+		}
+		p {
+			width: 400px;
+		}
+		strong {
+			display: block;
+		}
+		p.last {
+			width: 305px;
+		}
+		a {
+			color: rgba(255,255,255,.5);
+		}
+	}
+	.box {
+		width: 420px;
+		padding: 50px;
+		float: right;
+		&.box-large {
+			width: 660px;
+			float: left;
+		}
+	}
+	h5 {
+		font-size: 20px;
+		font-family: 'bau';
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 17px;
+		margin-bottom: 0;
+	}
+	.footer {
+		width: 100%;
+		padding: 20px 50px;
+		background: #FFF;
+		overflow: hidden;
+	}
+}
+
+
 .grid {
 	width: 1000px;
 	margin: 50px -100px;
@@ -1147,21 +1181,25 @@ blockquote {
 	-webkit-font-smoothing: antialiased;
 }
 
-/*
+
 .timestamp .mark:after {
 	position: absolute;
-	top: 50%;
-	left: -5px;
-	margin-top: -5px;
+	top: 0;
 	content: '';
+	left: -10px;
+	margin-top: 5px;
 	display: block;
+	width: 10px;
+	height: 1px;
+	background: rgba(0,0,0,.075);
+	/*
 	width: 0; 
 	height: 0; 
 	border-top: 5px solid transparent;
 	border-bottom: 5px solid transparent;
 	border-right: 5px solid #E5E5E5;
+	*/
 }
-*/
 
 .timestamp h5 {
 	font-family: 'bau';
@@ -1194,10 +1232,7 @@ blockquote {
 	left: 0;
 }
 .timestamp-right .mark:after {
-	left: auto;
-	right: -6px;
-	border-right: none;
-	border-left: 6px solid #E5E5E5;
+	left: 13px;
 }
 .timestamp-right h5,
 .timestamp-right h6,

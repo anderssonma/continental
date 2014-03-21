@@ -19,7 +19,7 @@ $(document).ready(function() {
 			        $(this).css('-webkit-transform', 'scale(' + integer + ')');
 			    },
 			    duration: 350
-			}, 'ease-out', function() {
+			}, function() {
 			  $(this).parent().removeClass('front');
 			});
 		} else {
@@ -39,7 +39,7 @@ $(document).ready(function() {
 			        $(this).css('-webkit-transform', 'scale(' + integer + ')');
 			    },
 			    duration: 350
-			},'ease-out');
+			});
 			
 		}
 	});
