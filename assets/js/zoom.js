@@ -14,8 +14,6 @@ $(document).ready(function() {
 			    	
 			    	if (integer === 1.1) {
 			    		integer = 2;
-			    	} else {
-			    		integer.toFixed(6);
 			    	}
 			        //$(this).css('-webkit-transform',"translate3d(0px, " + now + "px, 0px)");
 			        $(this).css('-webkit-transform', 'scale(' + integer + ')');
@@ -36,8 +34,6 @@ $(document).ready(function() {
 			    	
 			    	if (integer === 1.1) {
 			    		integer = 2;
-			    	} else {
-			    		integer.toFixed(6);
 			    	}
 			        //$(this).css('-webkit-transform',"translate3d(0px, " + now + "px, 0px)");
 			        $(this).css('-webkit-transform', 'scale(' + integer + ')');
