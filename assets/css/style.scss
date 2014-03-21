@@ -792,12 +792,12 @@ blockquote {
 			background-size: cover;
 		}
 		&.box-shortcut {
-			background: url(../img/srum_3_1440.jpg) no-repeat bottom center;
+			background: url(../img/split_shortcut.jpg) no-repeat bottom center;
 			background-size: cover;
 			margin-top: 50px;
 		}
 		&.box-station {
-			background: url(../img/entre_vasa_1440.jpg) no-repeat bottom center;
+			background: url(../img/split_station.jpg) no-repeat bottom center;
 			background-size: cover;
 			margin-bottom: 50px;
 		}
@@ -828,7 +828,7 @@ blockquote {
 	background: #F5F5F5;
 	background: linear-gradient(to top, #F6D8D6 0%, #322C2E 100%);
 	&.split-travel {
-		background: linear-gradient(to top, #6D6666 0%, #BD9380 100%);
+		background: linear-gradient(to top, #403F47 0%, #F9D7B4 100%);
 	}
 	.box {
 		position: absolute;
@@ -892,25 +892,24 @@ table {
 	margin: 60px 0;
 	color: $text-dark;
 	td {
-		width: 33.333%;
-		border-top: 1px solid #CCC;
-		border-bottom: 1px solid #CCC;
+		width: 30%;
+		border-top: 1px solid #F1F1F1;
 		padding: 20px 0;
 		span {
 			color: $text-dark-alt;
 			text-transform: uppercase;
-			font-size: 11px;
+			font-size: 10px;
 			display: inline-block;
 			margin-left: 4px;
 		}
+	}
+	tr td:first-child {
+		width: 40%;
 	}
 	th {
 		text-align: left;
 		padding: 20px 0;
 		text-transform: uppercase;
-	}
-	tbody tr:last-child td {
-		border-bottom: none;
 	}
 }
 
