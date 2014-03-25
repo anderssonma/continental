@@ -54,6 +54,36 @@ $(document).ready(function() {
 		}
 	});
 
+	var liveCam = {
+		months: [
+			'Januari',
+			'Februari',
+			'Mars',
+			'April',
+			'Maj',
+			'Juni',
+			'Juli',
+			'Augusti',
+			'September',
+			'Oktober',
+			'November',
+			'December'
+		],
+		init: function() {
+			$('.today').hover(
+				function() {
+					$('.timeline').addClass('faded');
+					var today = new Date();
+					var todaysDate = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+					$('.today-time').text(todaysDate);
+				}, function() {
+					$('.timeline').removeClass('faded');
+				}
+			);
+		}
+	};
+	liveCam.init();
+
 	/*
 	window.setTimeout(function() {
 		var svgFromTop = $('#svg-anim').offset().top;
