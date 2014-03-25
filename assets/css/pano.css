@@ -16,6 +16,8 @@
 
 .pano-bg {
 	background: #000;
+	height: 100%;
+	width: 100%;
 }
 #pano {
 	/* cursor: url(../Images/hand_grip_s.png) 10 10, move; */
