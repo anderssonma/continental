@@ -711,23 +711,39 @@ figure .figcaption-bg .gradient {
 	opacity: 0.5;
 }
 
-/* PROBABLY SAFE TO DEL
 blockquote {
-	font-family: 'Merriweather';
+	font-family: 'bau';
 	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
-	width: 824px;
+	width: 100%;
 	margin-left: -24px;
 	margin-top: 26px;
 	padding: 0 20px;
-	font-style: italic;
-	color: #666;
 	font-size: 18px;
 	line-height: 1.5;
 	border-width: 0 0 0 4px;
-  -webkit-border-image: -webkit-linear-gradient(#00B8E6, #003091) 1 100%;
+	color: #999;
+	//-webkit-border-image: -webkit-linear-gradient(#00B8E6, #003091) 1 100%;
+  .single-quote {
+  	font-family: 'caslon-graphique';
+		font-size: 50px;
+		display: block;
+		width: 34px;
+		height: 20px;
+		float: left;
+		line-height: 0.85;
+		color: #333;
+  }
+  .architecht {
+  	color: #999;
+  	display: block;
+  	margin-top: 8px;
+  	font-size: 14px;
+  }
+  strong {
+  	font-size: 14px;
+  }
 }
-*/
 
 .peek {
 	width: 800px;
