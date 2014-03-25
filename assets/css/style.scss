@@ -894,7 +894,7 @@ blockquote {
 		}
 	}
 	tbody tr {
-		border-top: 1px solid #F1F1F1;
+		border-top: 1px solid #EEE;
 	}
 	tr td:first-child {
 		width: 40%;
@@ -1433,12 +1433,20 @@ blockquote {
 .gallery .zoom-img-wrap {
 	position: relative;
 	z-index: 900;
-
+	-webkit-transition: 0.35s all;
 		&.front {
 		z-index: 999;
 	}
 }
 
+.gallery.dim {
+	.zoom-img-wrap {
+		opacity: 0.25;
+		&.front {
+			opacity: 1;
+		}
+	}
+}
 
 
 .media {
