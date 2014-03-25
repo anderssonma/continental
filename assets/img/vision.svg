@@ -2,22 +2,22 @@
 <!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Lager_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="52.833px" height="48px" viewBox="-2.333 0 52.833 48" enable-background="new -2.333 0 52.833 48" xml:space="preserve">
+	 width="52.833px" height="48px" viewBox="0 0 52.833 48" enable-background="new 0 0 52.833 48" xml:space="preserve">
 <g id="Expanded_6_">
 	<g>
 		<g>
-			<path d="M6,45v-9.414H3c-1.654,0-3-1.346-3-3v-26c0-1.654,1.346-3,3-3h42c1.654,0,3,1.346,3,3v26c0,1.654-1.346,3-3,3H15.414
-				L6,45z M3,5.586c-0.552,0-1,0.447-1,1v26c0,0.553,0.448,1,1,1h5v6.586l6.586-6.586H45c0.551,0,1-0.447,1-1v-26
-				c0-0.553-0.449-1-1-1H3z"/>
+			<path fill="#FFFFFF" d="M6,45v-9.414H3c-1.654,0-3-1.346-3-3v-26c0-1.654,1.346-3,3-3h42c1.653,0,3,1.346,3,3v26
+				c0,1.654-1.347,3-3,3H15.414L6,45z M3,5.586c-0.552,0-1,0.447-1,1v26c0,0.553,0.448,1,1,1h5v6.586l6.586-6.586H45
+				c0.551,0,1-0.447,1-1v-26c0-0.553-0.449-1-1-1H3z"/>
 		</g>
 		<g>
-			<circle cx="16" cy="19.586" r="2"/>
+			<circle fill="#FFFFFF" cx="16" cy="19.586" r="2"/>
 		</g>
 		<g>
-			<circle cx="32" cy="19.586" r="2"/>
+			<circle fill="#FFFFFF" cx="32" cy="19.586" r="2"/>
 		</g>
 		<g>
-			<circle cx="24" cy="19.586" r="2"/>
+			<circle fill="#FFFFFF" cx="24" cy="19.586" r="2"/>
 		</g>
 	</g>
 </g>

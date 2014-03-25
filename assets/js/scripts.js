@@ -74,8 +74,11 @@ $(document).ready(function() {
 				function() {
 					$('.timeline').addClass('faded');
 					var today = new Date();
-					var todaysDate = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
-					$('.today-time').text(todaysDate);
+					var hours = (today.getHours().toString().length > 1) ? today.getHours() : '0' + today.getHours();
+					var minutes = (today.getMinutes().toString().length > 1) ? today.getMinutes() : '0' + today.getMinutes();
+					var seconds = (today.getSeconds().toString().length > 1) ? today.getSeconds() : '0' + today.getSeconds();
+					//var todaysDate = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+					$('.today-time').text(hours + ':' + minutes + ':' + seconds);
 				}, function() {
 					$('.timeline').removeClass('faded');
 				}

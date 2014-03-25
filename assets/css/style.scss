@@ -237,7 +237,6 @@ nav li a img {
 	text-align: center;
 	-webkit-transition: 0.35s all;
 	width: 32px;
-	-webkit-filter: invert(100%);
 	opacity: 0.5;
 }
 
@@ -326,6 +325,9 @@ nav li:hover a span {
 
 
 
+.intro-collage {
+	margin-left: -100px;
+}
 
 /* PUZZLE TILES */
 .puzzle-tiles {
@@ -484,6 +486,8 @@ nav li:hover a span {
 
 .filter-red {
 	-webkit-filter: hue-rotate(-20deg);
+	-moz-filter: hue-rotate(-20deg);
+	filter: hue-rotate(-20deg);
 }
 
 
@@ -1219,6 +1223,9 @@ blockquote {
 	z-index: 1000;
 	transition: 0.35s all;
 	-webkit-transition: 0.35s 0.35s all;
+	transition: 0.35s 0.35s all;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
 	overflow: hidden;
 	.bg {
 		width: 100%;
@@ -1227,6 +1234,7 @@ blockquote {
 		z-index: 1;
 		background: url(img/bg_camera.png) no-repeat center;
 		-webkit-transition: 0.5s 0.35s all;
+		transition: 0.5s 0.35s all;
 	}
 	img {
 		position: absolute;
@@ -1235,6 +1243,7 @@ blockquote {
 		width: 40px;
 		margin: -17px 0 0 -20px;
 		-webkit-transition: 0.35s 0.35s all;
+		transition: 0.35s 0.35s all;
 		z-index: 2;
 	}
 	.today-time {
@@ -1245,6 +1254,7 @@ blockquote {
 		margin-left: -50px;
 		background: #FFF;
 		-webkit-transition: 0.35s bottom;
+		transition: 0.35s bottom;
 		padding: 3px 0 5px;
 		border-radius: 3px;
 		color: #555;
@@ -1261,18 +1271,23 @@ blockquote {
 		right: -200px;
 		top: -160px;
 		-webkit-transition: 0.35s all;
+		transition: 0.35s all;
 		.bg {
 			opacity: 0;
 			-webkit-transition: 0.5s all;
+			transition: 0.5s all;
 		}
 		img {
 			-webkit-transition: 0.35s all;
+			transition: 0.35s all;
 			-webkit-transform: scale(2);
+			transform: scale(2);
 			opacity: 0;
 		}
 		.today-time {
 			bottom: 30px;
 			-webkit-transition: 0.35s 0.25s bottom;
+			transition: 0.35s 0.25s all;
 		}
 	}
 }
@@ -1285,6 +1300,7 @@ blockquote {
 	margin: 0 60px 2px 0;
 	-webkit-font-smoothing: antialiased;
 	-webkit-transition: 0.35s all;
+	transition: 0.35s all;
 }
 .timestamp.timestamp-today h5 {
 	margin-top: 12px;
