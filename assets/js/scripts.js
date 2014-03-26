@@ -36,10 +36,65 @@ $(document).ready(function() {
 		parallaxArr.forEach(function(el, i) {
 			ctrl.addTween(el.top,
 				TweenMax.to(el.id, 1,
-					{css: {opacity: 0, marginTop: '100px'}}
+					{css: {opacity: 0, 'transform': 'translateY(-100px)'}}
 				), 800);
 		});
+
+		var firstBox = { 
+			el: $('#parallax-test #box-1')
+		};
+		firstBox.top = firstBox.el.offset().top - (windowHeightSplit + 300);
+
+		var secondBox = { 
+			el: $('#parallax-test #box-2')
+		};
+		secondBox.top = secondBox.el.offset().top - (windowHeightSplit + 300);
+
+		var thirdBox = {
+			el: $('#box-move')
+		};
+		thirdBox.top = thirdBox.el.offset().top - (windowHeightSplit + 300);
+		/*
+		var firstImg = {
+			el: $('#img-scroll-1')
+		}
+		firstImg.top = firstImg.el.offset().top;
+
+		var secondImg = {
+			el: $('#img-scroll-2')
+		}
+		secondImg.top = secondImg.el.offset().top - (windowHeightSplit); 
+		*/
+
+		ctrl.addTween(firstBox.top,
+			TweenMax.to(firstBox.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+			), 200);
+
+		ctrl.addTween(secondBox.top,
+			TweenMax.to(secondBox.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+			), 200);
+
+		ctrl.addTween(thirdBox.top,
+			TweenMax.to(thirdBox.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+			), 200);
+
+		/*
+		ctrl.addTween(firstImg.top,
+			TweenMax.to(firstImg.el, 1,
+				{css: {'transform': 'translateX(-0px) scale(1.1)'}}
+			), 600)
+		ctrl.addTween(secondImg.top,
+			TweenMax.to(secondImg.el, 1,
+				{css: {'transform': 'translateX(-20px) scale(1.1)'}}
+			), 600)
+		*/
+
 	},500);
+
+
 
 	var overlayActive = false;
 	$('#focusable').on('click', function() {
