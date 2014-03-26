@@ -19,7 +19,6 @@ $(document).ready(function() {
 			    	
 			    	if (integer === 1.1) {
 			    		integer = 2;
-			    		$(this).parent().removeClass('front');
 			    	}
 
 			    	var nextMod = (now * 1.25);
@@ -30,7 +29,10 @@ $(document).ready(function() {
 						
 			        $(this).css(prefix, 'scale(' + integer + ') translateX(' + nextMod + 'px) translateY(' +  (now * 0.9) + 'px)');
 			    },
-			    duration: 350
+			    duration: 350,
+			    complete: function() {
+			    	$(this).parent().removeClass('front');
+			    }
 			});
 		} else {
 			//$(this).wrap('<div class="zoom-img-wrap"></div>');

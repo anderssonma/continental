@@ -722,33 +722,48 @@ blockquote {
 	-moz-osx-font-smoothing: grayscale;
 	width: 100%;
 	margin-left: -24px;
-	margin-top: 26px;
+	margin-top: 0px;
 	padding: 0 20px;
-	font-size: 18px;
+	font-size: 24px;
 	line-height: 1.5;
 	border-width: 0 0 0 4px;
 	color: #999;
+	float: left;
 	//-webkit-border-image: -webkit-linear-gradient(#00B8E6, #003091) 1 100%;
   .single-quote {
   	font-family: 'caslon-graphique';
-		font-size: 50px;
+		font-size: 250px;
 		display: block;
 		width: 34px;
 		height: 20px;
-		float: left;
 		line-height: 0.85;
-		color: #333;
+		color: #F5F5F5;
+		width: 15%;
+		float: left;
   }
-  .architecht {
-  	color: #999;
-  	display: block;
-  	margin-top: 8px;
-  	font-size: 14px;
-  }
-  strong {
-  	font-size: 14px;
+  i {
+  	width: 80%;
+  	float: right;
+  	line-height: 30px;
   }
 }
+
+ .architecht {
+  	color: #999;
+  	display: block;
+  	margin-top: -10px;
+  	margin-left: 150px;
+  	font-size: 14px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	strong {
+  		font-size: 14px;
+  		color: #2990C8;
+			display: inline-block;
+			margin-bottom: 2px;
+  	}
+  }
+
 
 .peek {
 	width: 800px;
@@ -773,10 +788,10 @@ blockquote {
 	width: 1000px;
 	margin-left: -100px;
 	&.first {
-		margin-top: 200px;
+		margin-top: 100px;
 	}
 	&.last {
-		margin-bottom: 80px;
+		margin-bottom: 140px;
 		margin-top: 160px;
 	}
 	.box {
@@ -885,6 +900,7 @@ blockquote {
 				border-bottom: 30px solid #FFF;
 			}
 		}
+
 		h5 {
 			font-size: 20px;
 			font-family: 'bau';
@@ -1618,6 +1634,9 @@ blockquote {
 }
 .contact .persons {
 	overflow: hidden;
+	// TEMP NAV HACK
+	margin-top: -100px;
+	padding-top: 100px;
 }
 .contact .person {
 	float: left;
