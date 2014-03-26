@@ -55,10 +55,27 @@ $(document).ready(function() {
 		};
 		thirdBox.top = thirdBox.el.offset().top - (windowHeightSplit + 300);
 
+
+		tBox1 = {
+			el: $('#tbox-1')
+		};
+		tBox1.top = tBox1.el.offset().top - (windowHeightSplit + 300);
+		
+		tBox2 = {
+			el: $('#tbox-2')
+		};
+		tBox2.top = tBox2.el.offset().top - (windowHeightSplit + 300);
+
+
 		outL = { // OUTLINE LIVE
-			el: $('.outline-live')
+			el: $('#outline-live')
 		};
 		outL.top = outL.el.offset().top - (windowHeightSplit + 300);
+
+		outT = { // OUTLINE LIVE
+			el: $('#outline-travel')
+		};
+		outT.top = outT.el.offset().top - (windowHeightSplit + 300);
 		/*
 		var firstImg = {
 			el: $('#img-scroll-1')
@@ -73,21 +90,37 @@ $(document).ready(function() {
 
 		ctrl.addTween(firstBox.top,
 			TweenMax.to(firstBox.el, 1,
-				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.90, 'backgroundColor': '#1184C2'}}
 			), 200);
 
 		ctrl.addTween(secondBox.top,
 			TweenMax.to(secondBox.el, 1,
-				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.90, 'backgroundColor': '#1184C2'}}
 			), 200);
 
 		ctrl.addTween(thirdBox.top,
 			TweenMax.to(thirdBox.el, 1,
-				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.90, 'backgroundColor': '#1184C2'}}
 			), 200);
+
+
+		ctrl.addTween(tBox1.top,
+			TweenMax.to(tBox1.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.90, 'backgroundColor': '#1184C2'}}
+			), 200);
+		ctrl.addTween(tBox2.top,
+			TweenMax.to(tBox2.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.90, 'backgroundColor': '#1184C2'}}
+			), 200);
+
 
 		ctrl.addTween(outL.top,
 			TweenMax.to(outL.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95}}
+			), 200);
+
+		ctrl.addTween(outT.top,
+			TweenMax.to(outT.el, 1,
 				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95}}
 			), 200);
 

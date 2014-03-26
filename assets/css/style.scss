@@ -71,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'caslon-graphique';
 	color: $text-dark;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h3 {
@@ -107,6 +108,7 @@ h4 {
 p {
 	font-size: 18px;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: $text-dark-alt;
 	line-height: 1.5;
 }
@@ -261,6 +263,7 @@ nav li a span {
 	font-weight: bold;
 	-webkit-transition: 0.35s all;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	opacity: 0;
 	-webkit-transform: translate3d(60px,0,0);
 	-webkit-backface-visibilty: hidden;
@@ -497,7 +500,7 @@ nav li:hover a span {
 	background-size: cover;
 }
 .f-2 {
-	background: url(img/srum_3_1440.jpg) no-repeat bottom center;
+	background: url(img/srum_4_1440.jpg) no-repeat bottom center;
 	background-size: cover;
 }
 .f-3 {
@@ -513,7 +516,7 @@ nav li:hover a span {
 	background-size: cover;
 }
 .f-6 {
-	background: url(img/flyg_close_1440.jpg) no-repeat center;
+	background: url(img/tiltshift_view.jpg) no-repeat center;
 	background-size: cover;
 }
 
@@ -646,6 +649,7 @@ nav li:hover a span {
 	font-style: italic;
 	color: #777776;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-size: 14px;
 	position: relative;
 	z-index: 1;
@@ -715,6 +719,7 @@ blockquote {
 	font-family: 'bau';
 	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	width: 100%;
 	margin-left: -24px;
 	margin-top: 26px;
@@ -842,8 +847,7 @@ blockquote {
 	.box {
 		position: absolute;
 		padding: 70px;
-		width: 496px;
-		height: 460px;
+		width: 500px;
 		background: #1FBAE9;
 		top: -80px;
 		left: -70px;
@@ -900,6 +904,7 @@ blockquote {
 .train-table {
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	margin: 60px 0;
 	color: $text-dark;
 	td {
@@ -934,6 +939,9 @@ blockquote {
 	margin-top: 252px;
 	margin-right: -20px;
 	opacity: 0;
+	&.outline-travel {
+		margin-top: 292px;
+	}
 }
 
 .live-grid {
@@ -1126,6 +1134,7 @@ blockquote {
 	color: #383D3F;
 	text-align: center;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-size: 20px;
 	/*
 	margin-bottom: 20px;
@@ -1151,6 +1160,7 @@ blockquote {
 .grid li {
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: #555;
 	margin-bottom: 3px;
 }
@@ -1248,6 +1258,7 @@ blockquote {
 	font-weight: bold;
 	-webkit-transition: 0.35s all;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .timestamp .mark:after {
@@ -1357,7 +1368,6 @@ blockquote {
 	color: #CCC;
 	font-size: 14px;
 	margin: 0 60px 2px 0;
-	-webkit-font-smoothing: antialiased;
 	-webkit-transition: 0.35s all;
 	transition: 0.35s all;
 }
@@ -1370,7 +1380,6 @@ blockquote {
 	color: #333;
 	font-weight: normal;
 	font-size: 20px;
-	-webkit-font-smoothing: antialiased;
 	-webkit-transition: 0.35s all;
 }
 .timestamp p {
@@ -1628,7 +1637,6 @@ blockquote {
 .contact h6 {
 	font-size: 16px;
 	font-family: 'bau';
-	-webkit-font-smoothing: antialiased;
 	color: #333;
 	line-height: 26px;
 	margin: 0 0 12px 0;
@@ -1641,6 +1649,7 @@ blockquote {
 	font-weight: normal;
 	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .contact h6 span {
@@ -1698,7 +1707,6 @@ blockquote {
 	width: 400px;
 	font-size: 18px;
 	float: left;
-	-webkit-font-smoothing: antialiased;
 }
 .newsletter h6 span {
 	font-weight: normal;
@@ -1712,6 +1720,7 @@ blockquote {
 	display: block;
 	float: right;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 .newsletter input[type="email"] {
 	background: #F8F8F8;
@@ -1733,6 +1742,7 @@ blockquote {
 	text-transform: uppercase;
 	font-weight: bold;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.25);
 }
 
@@ -1760,7 +1770,6 @@ blockquote {
 	font-family: 'bau';
 	color: #FFF;
 	font-size: 18px;
-	-webkit-font-smoothing: antialiased;
 	text-transform: uppercase;
 	text-align: center;
 	border-bottom: 1px solid #000;
