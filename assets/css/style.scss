@@ -927,9 +927,18 @@ blockquote {
 }
 
 
+/* BO */
+.outline-live {
+	float: right;
+	width: 400px;
+	margin-top: 252px;
+	margin-right: -20px;
+	opacity: 0;
+}
+
 .live-grid {
 	width: 1000px;
-	margin: 100px 0 100px -100px;
+	margin: 70px 0 100px -100px;
 	.backdrop {
 		height: 1000px;
 		width: 100%;
@@ -955,9 +964,6 @@ blockquote {
 			letter-spacing: 0px;
 			font-size: 15px;
 			margin: 30px 0 12px;
-		}
-		p.last {
-			width: 305px;
 		}
 		a {
 			color: rgba(255,255,255,.5);
@@ -994,7 +1000,6 @@ blockquote {
 		text-transform: uppercase;
 	}
 	p {
-		font-size: 17px;
 		margin-bottom: 0;
 	}
 	.footer {

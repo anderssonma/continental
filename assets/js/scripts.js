@@ -54,6 +54,11 @@ $(document).ready(function() {
 			el: $('#box-move')
 		};
 		thirdBox.top = thirdBox.el.offset().top - (windowHeightSplit + 300);
+
+		outL = { // OUTLINE LIVE
+			el: $('.outline-live')
+		};
+		outL.top = outL.el.offset().top - (windowHeightSplit + 300);
 		/*
 		var firstImg = {
 			el: $('#img-scroll-1')
@@ -79,6 +84,11 @@ $(document).ready(function() {
 		ctrl.addTween(thirdBox.top,
 			TweenMax.to(thirdBox.el, 1,
 				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95, 'backgroundColor': '#1184C2'}}
+			), 200);
+
+		ctrl.addTween(outL.top,
+			TweenMax.to(outL.el, 1,
+				{css: {'transform': 'translateY(-300px)', 'opacity': 0.95}}
 			), 200);
 
 		/*
