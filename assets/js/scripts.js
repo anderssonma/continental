@@ -185,7 +185,13 @@ $(document).ready(function() {
 	};
 	liveCam.init();
 
-	/*
+
+
+	/* SVG ANIMATOR - SAFE TO REMOVE !
+	==================================
+	- REQUIRES EVERYTHING TO BE A PATH
+
+
 	window.setTimeout(function() {
 		var svgFromTop = $('#svg-anim').offset().top;
 		var svgIsAnimated = false;
@@ -199,7 +205,6 @@ $(document).ready(function() {
 			}
 		});
 	}, 250);
-	*/
 	
 	var drawFPS = 60;
 	var distancePerPoint = 10;
@@ -262,7 +267,6 @@ $(document).ready(function() {
 		}
 	};
 
-	/*
 	var anim1 = new AnimatedSVG(circle1.el, circle1.speed);
 	var anim2 = new AnimatedSVG(document.getElementById('path-1'), $('#path-1').data('speed'));
 	var anim3 = new AnimatedSVG(document.getElementById('path-2'), $('#path-2').data('speed'));

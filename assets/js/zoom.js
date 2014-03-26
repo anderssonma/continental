@@ -2,7 +2,6 @@ $(document).ready(function() {
 
 	var prefix = Modernizr.prefixed('transform');
 	prefix = prefix.replace(/([A-Z])/g, function(prefix,m1){ return '-' + m1.toLowerCase(); }).replace(/^ms-/,'-ms-');
-	console.log(prefix);
 	var isWrapped = false;
 	$('.gallery img').on('click', function() {
 		var direction = $(this).data('align');
