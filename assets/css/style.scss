@@ -125,6 +125,100 @@ p.ingress {
 }
 
 
+.intro-bg {
+	position: relative;
+	width: 100%;
+	background: #222;
+	.bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: url(../img/vy_klarab_1440.jpg) no-repeat bottom center;
+	background-attachment: fixed;
+	background-size: cover;
+	opacity: 0.15;
+	}
+	
+	.box {
+		width: 1000px;
+		margin: 0 -100px;
+		padding: 100px 100px 0;
+		position: relative;
+		z-index: 1;
+	}
+	.box-header {
+		margin-top: 200px;
+		h3, p {
+			color: #FFF !important;
+		}
+	}
+	.box-50 p {
+		width: 50%;
+	}
+}
+
+.intro-cols {
+	h4 {
+		font-size: 26px;
+		margin-top: 0;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+
+.fifties {
+	width: 100%;
+	overflow: hidden;
+	padding: 100px 0;
+}
+.fifty {
+	width: 100%;
+	background: #FFF;
+	position: relative;
+	.wrapper {
+		width: 960px;
+		margin: 0 auto;
+		background: #FFF;
+		overflow: hidden;
+	}
+	.text {
+		width: 50%;
+		padding: 100px 100px 100px 0;
+		float: left;
+		h5 {
+			font-family: 'bau';
+			font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	.back {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 0;
+		bottom: 0;
+		background: url(img/parallax-1.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+	&.fifty-right {
+		.text {
+			padding: 100px 0 100px 100px;
+			float: right;
+		}
+		.back {
+			left: 0;
+			right: 50%;
+			background: url(../img/vy_takt_1440.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+}
+
+
 /* REMOVE LATER
 .spotify {
 	position: fixed;
@@ -415,7 +509,7 @@ blockquote {
 		width: 34px;
 		height: 20px;
 		line-height: 0.85;
-		color: #F5F5F5;
+		color: rgba(0,0,0,.1);
 		width: 15%;
 		float: left;
   }
@@ -444,8 +538,8 @@ blockquote {
 
 
 .overlays {
-	width: 1000px;
-	margin-left: -100px;
+	width: 960px;
+	margin-left: -80px;
 	&.first {
 		margin-top: 100px;
 	}
@@ -508,8 +602,8 @@ blockquote {
 }
 
 .split-mid {
-	width: 1000px;
-	margin: 0 0 0 -100px;
+	width: 960px;
+	margin: 0 0 0 -80px;
 	position: relative;
 	z-index: 1;
 	height: 0;
@@ -521,10 +615,10 @@ blockquote {
 	.box {
 		position: absolute;
 		padding: 70px;
-		width: 500px;
-		background: #1FBAE9;
+		width: 480px;
+		background: linear-gradient(to top, #004494 0%, #1fbae9 100%);
 		top: -80px;
-		left: -70px;
+		left: 0;
 		opacity: 0;
 		&:last-child {
 			top: 660px;
@@ -710,7 +804,7 @@ blockquote {
 		h5 {
 			font-family: 'bau';
 			font-weight: normal;
-			color: #CCC;
+			color: #19A3D8;
 			font-size: 14px;
 			margin: 0 60px 2px 0;
 			-webkit-transition: 0.35s all;
@@ -736,7 +830,7 @@ blockquote {
 		width: 40px;
 		margin-left: 150px;
 		border: none;
-		border-bottom: 1px solid #EBEBEB;
+		border-bottom: 1px solid #CCC;
 		}
 		&.timestamp-right {
 			hr {
@@ -932,15 +1026,15 @@ blockquote {
 
 
 .gallery {
-	width: 1000px;
+	width: 960px;
 	margin: 0 auto 0 -100px;
-	height: 1080px;
+	height: 720px;
 }
 .gallery img {
 	position: relative;
-	width: 50%;
+	width: 320px;
 	float: left;
-	height: 360px;
+	height: 240px;
 	//border: 2px solid #FFF;
 	cursor: -webkit-zoom-in;
 }
