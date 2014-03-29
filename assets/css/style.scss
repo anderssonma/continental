@@ -157,28 +157,28 @@ p.ingress {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: url(../img/vision_ny.jpg) no-repeat bottom center;
+		background: url(../img/intro_vision.jpg) no-repeat bottom center;
 		background-attachment: fixed;
 		background-size: cover;
 		opacity: 1;
 	}
 	&.intro-live .bg {
-		background: url(../img/bostad.jpg) no-repeat bottom center;
+		background: url(../img/intro_living.jpg) no-repeat bottom center;
 		background-attachment: fixed;
 		background-size: cover;
 	}
 	&.intro-travel .bg {
-		background: url(img/srum_4_1440.jpg) no-repeat bottom center;
+		background: url(img/intro_travel.jpg) no-repeat bottom center;
 		background-attachment: fixed;
 		background-size: cover;
 	}
 	&.intro-project .bg {
-		background: url(img/tiltshift_view.jpg) no-repeat bottom center;
+		background: url(img/intro_project.jpg) no-repeat bottom center;
 		background-attachment: fixed;
 		background-size: cover;
 	}
 	&.intro-meet .bg {
-		background: url(img/section_social.jpg) no-repeat bottom center;
+		background: url(img/intro_meetings.jpg) no-repeat bottom center;
 		background-attachment: fixed;
 		background-size: cover;
 	}
@@ -211,57 +211,6 @@ p.ingress {
 	}
 	.box-50 p {
 		width: 50%;
-	}
-}
-
-.fifties {
-	width: 100%;
-	overflow: hidden;
-	padding: 100px 0;
-}
-.fifty {
-	width: 100%;
-	background: #FFF;
-	position: relative;
-	.wrapper {
-		width: 960px;
-		margin: 0 auto;
-		background: #FFF;
-		overflow: hidden;
-	}
-	.text {
-		width: 50%;
-		padding: 100px 100px 100px 0;
-		float: left;
-		h5 {
-			font-family: 'bau';
-			font-size: 20px;
-		}
-		p {
-			font-size: 16px;
-		}
-	}
-	.back {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		right: 0;
-		bottom: 0;
-		background: url(img/parallax-1.jpg) no-repeat center;
-		background-size: cover;
-	}
-
-	&.fifty-right {
-		.text {
-			padding: 100px 0 100px 100px;
-			float: right;
-		}
-		.back {
-			left: 0;
-			right: 50%;
-			background: url(../img/vy_takt_1440.jpg) no-repeat center;
-			background-size: cover;
-		}
 	}
 }
 
@@ -426,93 +375,6 @@ nav {
 }
 
 
-.fullscreen {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	-webkit-transform: translate3d(0,0,0); /* HARDWARE ACCELERATE IT */
-}
-.f-bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: url(img/vy_vasag_1440.jpg) no-repeat center bottom;
-	background-size: cover;
-	-webkit-filter: brightness(90%) hue-rotate(-20deg);
-}
-
-.filter-red {
-	-webkit-filter: hue-rotate(-20deg);
-	-moz-filter: hue-rotate(-20deg);
-	filter: hue-rotate(-20deg);
-}
-
-
-.f-1 {
-	-webkit-filter: none;
-	background: url(img/vy_klarab_1440.jpg) no-repeat bottom center;
-	background-size: cover;
-}
-.f-2 {
-	background: url(img/srum_4_1440.jpg) no-repeat bottom center;
-	background-size: cover;
-}
-.f-3 {
-	background: url(img/vy_takt_1440.jpg) no-repeat center;
-	background-size: cover;
-}
-.f-4 {
-	background: url(img/vy_terass_1440.jpg) no-repeat center;
-	background-size: cover;
-}
-.f-5 {
-	background: url(img/bostad.jpg) no-repeat center;
-	background-size: cover;
-}
-.f-6 {
-	background: url(img/tiltshift_view.jpg) no-repeat center;
-	background-size: cover;
-}
-
-/* REMOVE LATER
-.quote {
-	height: 340px !important;
-	width: 1200px !important;
-	margin: 0 0 8px -200px;
-	.bg, .inner {
-		height: 340px !important;
-	}
-	.inner {
-		width: 800px !important;
-	}
-	i {
-		font-family: 'Merriweather', 'bau', serif;
-		color: #FFF;
-		font-size: 26px;
-		-webkit-font-smoothing: antialiased;
-	}
-	hr {
-		width: 140px;
-		text-align: left;
-		background: none;
-		border: none;
-		margin-top: 16px;
-		border-bottom: 1px solid rgba(255,255,255,.5);
-	}
-	span {
-		text-align: center;
-		display: block;
-		color: #FFF;
-		-webkit-font-smoothing: antialiased;
-		font-size: 14px;
-		margin-top: 14px;
-		opacity: 0.5;
-	}
-}
-*/
-
 .alt-bg {
 	width: 100%;
 	background: #F5F5F5;
@@ -626,19 +488,10 @@ blockquote {
 		-webkit-backface-visibilty: hidden;
 		position: relative;
 		&.box-location {
-			background: url(../img/parallax-1.jpg) no-repeat bottom center;
-		}
-		&.box-social {
-			background: url(../img/vy_takt_1440.jpg) no-repeat bottom center;
-			background-size: cover;
-		}
-		&.box-shortcut {
-			background: url(../img/split_shortcut.jpg) no-repeat bottom center;
-			background-size: cover;
-			height: 434px;
+			background: url(../img/offset_vision.jpg) no-repeat bottom center;
 		}
 		&.box-station {
-			background: url(../img/station_1.jpg) no-repeat bottom center;
+			background: url(../img/offset_station.jpg) no-repeat bottom center;
 			background-size: cover;
 			height: 440px;
 			.overlay {
@@ -652,7 +505,7 @@ blockquote {
 			height: 460px;
 		}
 		&.box-meet {
-			background: url(../img/meet_eat.jpg) no-repeat bottom center;
+			background: url(../img/offset_meet.jpg) no-repeat bottom center;
 			background-size: cover;
 			height: 520px;
 			.overlay {
@@ -824,76 +677,6 @@ blockquote {
 }
 
 
-/*
-.live-grid {
-	width: 1000px;
-	margin: 70px 0 100px -100px;
-	.backdrop {
-		height: 1000px;
-		width: 100%;
-		position: relative;
-		background: url(img/fixed_klarab.jpg) no-repeat top center;
-		background-attachment: fixed;
-	}
-	.box.transp {
-		position: absolute;
-		width: 500px;
-		top: 40px;
-		left: 50px;
-		padding-right: 0;
-		h5, p {
-			color: #FFF;
-		}
-		p {
-			width: 400px;
-		}
-		strong {
-			display: block;
-			text-transform: uppercase;
-			letter-spacing: 0px;
-			font-size: 15px;
-			margin: 30px 0 12px;
-		}
-		a {
-			color: rgba(255,255,255,.5);
-		}
-	}
-	.box {
-		width: 420px;
-		padding: 50px;
-		float: right;
-		&.box-large {
-			width: 660px;
-			float: left;
-		}
-	}
-	.box.move {
-		width: 500px;
-		padding: 70px;
-		background: #1FBAE9;
-		position: absolute;
-		bottom: -220px;
-		left: -70px;
-		opacity: 0;
-		h5, p {
-			color: #FFF;
-		}
-		a {
-			color: rgba(255,255,255,.7);
-		}
-	}
-	h5 {
-		font-size: 20px;
-		font-family: 'bau';
-		margin-bottom: 30px;
-		text-transform: uppercase;
-	}
-	p {
-		margin-bottom: 0;
-	}
-}
-*/
-
 // TIMELINE MAIN CSS
 .timeline {
 	width: 720px;
@@ -905,6 +688,8 @@ blockquote {
 		width: 100%;
 		top: -50px;
 		left: 0;
+		-webkit-transition: 0.35s all;
+		transition: 0.35s all;
 	}
 	.line {
 		position: absolute;
@@ -989,8 +774,11 @@ blockquote {
 			}
 		}
 	}
-	&.faded .timestamp .text {
-		opacity: 0.15;
+	&.faded {
+		h4,
+		.timestamp .text {
+			opacity: 0.15;
+		}
 	}
 }
 
@@ -1142,7 +930,11 @@ blockquote {
 	}
 }
 
-
+#imagelightbox
+{
+    position: fixed;
+    z-index: 9999;
+}
 
 
 .gallery {
@@ -1447,28 +1239,29 @@ blockquote {
 	}
 	img {
 		float: left;
-		margin: 0 20px;
+		margin: 0 27px;
 	}
 	.jernhusen {
-		width: 100px;
+		width: 130px;
 		margin-top: 10px;
 		margin-left: 0;
 	}
 	.sl {
-		width: 50px;
-	}
-	.stockholm-stad {
-		width: 110px;
+		width: 60px;
 	}
 	.landsting {
-		width: 80px;
+		width: 100px;
+	}
+	.stockholm-stad {
+		width: 140px;
+		margin-top: 4px;
 	}
 	.strabag {
 		margin-top: 10px;
-		width: 60px;
+		width: 90px;
 	}
 	.trafikverket {
-		width: 150px;
+		width: 170px;
 		margin-top: 10px;
 		margin-right: 0;
 	}

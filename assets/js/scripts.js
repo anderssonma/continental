@@ -180,7 +180,9 @@ $(document).ready(function() {
 					//var todaysDate = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
 					$('.today-time').text(hours + ':' + minutes + ':' + seconds);
 				}, function() {
-					$('.timeline').removeClass('faded');
+					window.setTimeout(function() {
+						$('.timeline').removeClass('faded');
+					}, 350);
 				}
 			);
 		}
