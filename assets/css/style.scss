@@ -148,8 +148,10 @@ p.ingress {
 	position: relative;
 	width: 100%;
 	background: #222;
-	.sep {
-		padding-bottom: 50px;
+	overflow: hidden;
+	.spacer {
+		height: 700px; // DEFAULT TEMP HEIGHT
+		width: 100%;
 	}
 	.bg {
 		position: absolute;
@@ -183,14 +185,13 @@ p.ingress {
 	
 	.box {
 		width: 720px;
-		margin: 0;
+		margin: -150px auto 50px;
 		position: relative;
 		z-index: 1;
 	}
 	.box-header {
-		margin-top: 100%;
 		h2 {
-			margin-top: -200px;
+			margin-top: 0;
 		}
 		h3, p {
 			color: #FFF !important;
@@ -717,75 +718,6 @@ blockquote {
 		a {
 			color: #FFF;
 			opacity: 0.75;
-		}
-	}
-}
-
-.split-mid {
-	display: none;
-	width: 960px;
-	margin: 0 0 0 -80px;
-	position: relative;
-	z-index: 1;
-	height: 0;
-	background: #FFF;
-	//background: linear-gradient(to top, #F6D8D6 0%, #322C2E 100%);
-	&.split-travel {
-		background: linear-gradient(to top, #403F47 0%, #F9D7B4 100%);
-	}
-	.box {
-		position: absolute;
-		padding: 70px;
-		width: 480px;
-		background: linear-gradient(to top, #004494 0%, #1fbae9 100%);
-		top: -80px;
-		left: 0;
-		opacity: 0;
-		&:last-child {
-			top: 660px;
-			right: -70px;
-			left: auto;
-			&:after {
-				display: none;
-				position: absolute;
-				left: 50%;
-				bottom: -30px;
-				margin-left: -15px;
-				content: '';
-				width: 0; 
-				height: 0; 
-				border-right: 22px solid transparent;
-				border-left: 22px solid transparent;
-				border-top: 30px solid #FFF;
-			}
-		}
-		&:first-child {
-			&:before {
-				display: none;
-				position: absolute;
-				left: 50%;
-				top: -30px;
-				margin-left: -15px;
-				content: '';
-				width: 0; 
-				height: 0; 
-				border-right: 22px solid transparent;
-				border-left: 22px solid transparent;
-				border-bottom: 30px solid #FFF;
-			}
-		}
-
-		h5 {
-			font-size: 20px;
-			font-family: 'bau';
-			margin-bottom: 30px;
-			text-transform: uppercase;
-			color: #FFF;
-		}
-		p {
-			font-size: 17px;
-			margin-bottom: 0;
-			color: #FFF;
 		}
 	}
 }

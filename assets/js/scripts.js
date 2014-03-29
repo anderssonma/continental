@@ -1,25 +1,45 @@
-var getOffset = function(el) {
-	var _x = 0;
-	var _y = 0;
-	while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-			_x += el.offsetLeft - el.scrollLeft;
-			_y += el.offsetTop - el.scrollTop;
-			el = el.offsetParent;
-	}
-	return { top: _y, left: _x };
-};
-
-
 $(document).ready(function() {
 
-	var windowHeightSplit = $(window).height() / 2;
-	console.log(windowHeightSplit);
-	var ctrl = $.superscrollorama();
+	var windowHeightSplit,
+			spacers = $('.intro-bg .spacer'),
+			scrollArr = [];
 
+	var updatePins = function() {
+		if (scrollArr.length > 0) {
+			for (i = 0; i < scrollArr.length; i++) {
+				ctrl.removeTween(scrollArr[i].top, false);
+				// REMOVE TWEEN THEN ADD IT AGAIN
+				scrollArr[i].top = $(scrollArr[i].topEl).offset().top - windowHeightSplit;
+				ctrl.addTween(scrollArr[i].top,
+					TweenMax.to(scrollArr[i].el, 1,
+						{css: {'opacity': 0.1}}
+					), (windowHeightSplit / 2));
+			}
+			$(window).trigger('scroll'); // TRIGGER SCROLL ONCE TO NORMALIZE
+		}
+	}
+
+	var updateIntros = function() {
+		var windowH = $(window).height();
+		$(spacers).each(function(i, el) {
+			$(el).height(windowH);
+		});
+	};
+
+	updateIntros();
+
+	window.addEventListener('resize:end', function(event) {
+		windowHeightSplit = $(window).height() / 2;
+  	updateIntros();
+  	updatePins();
+	}, false);
+
+	windowHeightSplit = $(window).height() / 2;
+	var ctrl = $.superscrollorama();
 	$('nav a').smoothScroll();
 
 	window.setTimeout(function() {
-		
+
 		outL = { // OUTLINE LIVE
 			el: $('#outline-live')
 		};
@@ -29,18 +49,6 @@ $(document).ready(function() {
 			el: $('#outline-travel')
 		};
 		outT.top = outT.el.offset().top - (windowHeightSplit + 300);
-		/*
-		var firstImg = {
-			el: $('#img-scroll-1')
-		}
-		firstImg.top = firstImg.el.offset().top;
-
-		var secondImg = {
-			el: $('#img-scroll-2')
-		}
-		secondImg.top = secondImg.el.offset().top - (windowHeightSplit); 
-		*/
-
 
 
 		ctrl.addTween(outL.top,
@@ -54,9 +62,24 @@ $(document).ready(function() {
 			), 200);
 
 
+		$('.intro-bg').each(function(i, el) {
+			var newItem = {
+				topEl: $('#' + $(el).attr('id') + ' h2'),
+				el: $('#' + $(el).attr('id') + ' .bg')
+			};
+			newItem.top = $('#' + $(el).attr('id') + ' h2').offset().top - (windowHeightSplit);
+			ctrl.addTween(newItem.top,
+				TweenMax.to(newItem.el, 1,
+					{css: {'opacity': 0.1}}
+				), (windowHeightSplit / 2));
+
+			scrollArr.push(newItem);
+		});
+
+		$(window).trigger('scroll');
 
 		/* INTRO VISION
-		======== */
+		======== 
 		var introVision = {
 			el: $('#intro-vision .bg')
 		};
@@ -67,8 +90,8 @@ $(document).ready(function() {
 				{css: {'opacity': 0.1}}
 			), 500);
 
-		/* INTRO MEET
-		======== */
+		INTRO MEET
+		======== 
 		var introMeet = {
 			el: $('#intro-meet .bg')
 		};
@@ -79,8 +102,8 @@ $(document).ready(function() {
 				{css: {'opacity': 0.1}}
 			), 500);
 
-		/* INTRO LIVE
-		======== */
+		INTRO LIVE
+		========
 		var introLive = {
 			el: $('#intro-live .bg')
 		};
@@ -91,8 +114,8 @@ $(document).ready(function() {
 				{css: {'opacity': 0.1}}
 			), 600);
 
-		/* INTRO TRAVEL
-		======== */
+		INTRO TRAVEL
+		========
 		var introTravel = {
 			el: $('#intro-travel .bg')
 		};
@@ -103,8 +126,8 @@ $(document).ready(function() {
 				{css: {'opacity': 0.1}}
 			), 600);
 
-		/* INTRO PROJECT
-		======== */
+		INTRO PROJECT
+		========
 		var introProject = {
 			el: $('#intro-project .bg')
 		};
@@ -114,6 +137,7 @@ $(document).ready(function() {
 			TweenMax.to(introProject.el, 1,
 				{css: {'opacity': 0.1}}
 			), 600);
+		*/
 
 		/*
 		ctrl.addTween(firstImg.top,
@@ -126,24 +150,8 @@ $(document).ready(function() {
 			), 600)
 		*/
 
-		$(window).trigger('scroll');
+	}, 500);
 
-	},500);
-
-
-
-	var overlayActive = false;
-	$('#focusable').on('click', function() {
-		if (overlayActive) {
-			$('body').css({overflow: 'auto'});
-			$('#focusable').removeClass('focus');
-			overlayActive = false;
-		} else {
-			$('body').css({overflow: 'hidden'});
-			$('#focusable').addClass('focus');
-			overlayActive = true;
-		}
-	});
 
 	var liveCam = {
 		months: [
