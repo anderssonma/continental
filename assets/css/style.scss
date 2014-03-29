@@ -507,6 +507,7 @@ blockquote {
 			background: url(../img/vy_klarab_1440.jpg) no-repeat bottom center;
 			background-size: cover;
 			height: 460px;
+			margin-bottom: 30px;
 		}
 		&.box-meet {
 			background: url(../img/offset_meet.jpg) no-repeat bottom center;
@@ -624,11 +625,24 @@ blockquote {
 .outlines {
 	width: 100%;
 	position: relative;
+	h4 {
+		margin-top: 30px;
+		&.first {
+			margin-top: 0;
+		}
+	}
 	p {
-		margin: 6px 0 30px;
+		margin-top: 6px;
+		&.first {
+			margin-top: 0;
+		}
 	}
 	.text {
 		width: 50%;
+		&.right {
+			width: 44%;
+			float: right;
+		}
 	}
 	img {
 		position: absolute;
@@ -652,6 +666,10 @@ blockquote {
 		opacity: 0.5;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		&.first {
+			display: block;
+			margin-top: 30px;
+		}
 		&.white {
 			color: #FFF;
 			opacity: 0.75;
@@ -950,13 +968,17 @@ blockquote {
 
 .gallery {
 	width: 960px;
-	margin: 0 auto 0 -120px;
-	height: 720px;
+	padding-bottom: 80px;
+	.images {
+		margin-top: 40px;
+		width: 100%;
+		height: 220px;
+	}
 	img {
 		position: relative;
 		width: 320px;
 		float: left;
-		height: 240px;
+		height: 220px;
 		cursor: -webkit-zoom-in;
 		cursor: -moz-zoom-in;
 		cursor: zoom-in;
@@ -986,7 +1008,7 @@ blockquote {
 
 .media {
 	width: 960px;
-	margin: 20px auto 100px;
+	margin: 20px auto 60px;
 	overflow: hidden;
 	h4 {
 		margin-top: 0;
