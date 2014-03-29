@@ -13,6 +13,6 @@
 		</mobile>
 	</image>
 
-	<autorotate enabled="false" waittime="4" speed="3" horizon="10.0" />
+	<autorotate enabled="false" waittime="4" speed="2" horizon="10.0" />
 
 </krpano>

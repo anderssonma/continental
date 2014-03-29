@@ -1,9 +1,8 @@
-<div class="pano-bg">
+<div id="pano-wrap" class="pano-bg">
 	<div id="pano"></div>
-</div>
 
 	<div id="expand" class="btn-expand">
-		<div class="half-circle"><i><img src="<!-- @path arrow_b.png -->"></i></div>
+		<img src="<!-- @path arrow_b.png -->">
 	</div>
 
 	<!--
@@ -14,11 +13,24 @@
 
 	<div id="intro" class="intro sharptext">
 		<h1>Stockholm Continental</h1>
-		<span>En upplevelse på alla plan</span>
+		<span>En upplevelse på flera plan</span>
 		<p>Varsågod - utsikten är helt ny, snart kommer du kunna ta en drink här och njuta ordentligt av den. Välkommen!</p>
-		<!-- <div class="btn-form" id="trigger-form">JAG VILL VETA MER</div> -->
+
+		<div class="btn-form" id="trigger-form">TITTA PÅ UTSIKTEN</div>
 	</div>
 
-<div class="sep">
-	<img class="intro-collage" src="<!-- @path infografik.jpg -->">
+	<div class="scroll-btn" id="scroll-down">
+			<img src="<!-- @path arrow_down.png -->">
+			<span class="read-more">LÄS MER</span>
+		</div>
+
+	<ul class="controls">
+		<li id="pano-zoom-in">+</li>
+		<li id="pano-zoom-out">-</li>
+		<li id="pano-left">&larr;</li>
+		<li id="pano-right">&rarr;</li>
+		<li id="pano-up">&uarr;</li>
+		<li id="pano-down">&darr;</li>
+	</ul>
+
 </div>

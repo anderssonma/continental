@@ -3,12 +3,59 @@ var Pano = {
 	textTimer: null
 };
 
-
 $(document).ready(function (){
 
-	embedpano({swf:"assets/js/vendor/pano_sphere.swf", xml:"assets/js/vendor/pano_sphere.xml", target:"pano", html5:"prefer", passQueryParameters:true, wmode:"opaque", mwheel: false});
-	var krpano = document.getElementById("krpanoSWFObject");
+	var panoReady = function(pano) {
+		var krpano = pano;
+		console.log(pano);
+		window.setTimeout(function() {
+			//krpano.set("autorotate.enabled", true);
+			
 
+			// ZOOM IN/OUT BTNS
+			$('#pano-zoom-in').on('mousedown', function() {
+				krpano.set('fov_moveforce',-1);
+			}).on('mouseup', function() {
+				krpano.set('fov_moveforce',0);
+			});
+			$('#pano-zoom-out').on('mousedown', function() {
+				krpano.set('fov_moveforce',1);
+			}).on('mouseup', function() {
+				krpano.set('fov_moveforce',0);
+			});
+
+			// LEFT/RIGHT BTNS
+			$('#pano-left').on('mousedown', function() {
+				krpano.set('hlookat_moveforce',-1);
+			}).on('mouseup', function() {
+				krpano.set('hlookat_moveforce',0);
+			});
+			$('#pano-right').on('mousedown', function() {
+				krpano.set('hlookat_moveforce',1);
+			}).on('mouseup', function() {
+				krpano.set('hlookat_moveforce',0);
+			});
+
+			// UP/DOWN BTNS
+			$('#pano-up').on('mousedown', function() {
+				krpano.set('vlookat_moveforce',-1);
+			}).on('mouseup', function() {
+				krpano.set('vlookat_moveforce',0);
+			});
+			$('#pano-down').on('mousedown', function() {
+				krpano.set('vlookat_moveforce',1);
+			}).on('mouseup', function() {
+				krpano.set('vlookat_moveforce',0);
+			});
+
+		}, 100);
+	}
+	embedpano({swf:"assets/js/vendor/pano_sphere.swf", xml:"assets/js/vendor/pano_sphere.xml", target:"pano", html5:"prefer", passQueryParameters:true, wmode:"opaque", mwheel: false, onready:panoReady});
+	
+
+	
+
+	//console.log(krpano.get('view.fov'));
 	/*
 	window.setTimeout(function() {
 		window.scrollTo(0,1);
@@ -24,7 +71,7 @@ $(document).ready(function (){
 
 
 	$('.modal-overlay').on('click', function() {
-		$('body').removeClass('form-active');
+		$('#pano-wrap').removeClass('form-active');
 	});
 
 	/*
@@ -47,20 +94,18 @@ $(document).ready(function (){
 	});
 */
 
-$('#pano').on('mousedown', function() {
-	$('#pano').addClass('moving');
-});
 
 	var introHide = function() {
 		if (Pano.support.csstra) { // IF BETTER IE9 AND BELOW
-			$('body').addClass('panning hide');
+			$('#pano-wrap').addClass('panning hide');
 		} else {
-			$('body').addClass('panning');
+			$('#pano-wrap').addClass('panning');
 			window.setTimeout(function() {
-			$('#intro').animate({opacity: 0}, 250);
-			window.setTimeout(function() {
-				$('#expand').animate({top: 0}, 250);
-			}, 350);
+			$('#intro').animate({opacity: 0, marginTop: '-985px'}, 500);
+			$('#scroll-down').animate({bottom: '-100px'}, 250);
+				window.setTimeout(function() {
+					$('#expand').animate({top: 0}, 250);
+				}, 350);
 			}, 0);
 		}
 		Pano.isHidden = true;
@@ -68,13 +113,14 @@ $('#pano').on('mousedown', function() {
 
 	var introShow = function() {
 		if (Pano.support.csstra) {
-			$('body').removeClass('panning hide');
+			$('#pano-wrap').removeClass('panning hide');
 		} else {
-			$('body').removeClass('panning');
+			$('#pano-wrap').removeClass('panning');
 			window.setTimeout(function() {
 				$('#expand').animate({top: '-50px'}, 250);
 				window.setTimeout(function() {
-					$('#intro').animate({opacity: 1}, 250);
+					$('#intro').animate({opacity: 1, marginTop: '-185px'}, 250);
+					$('#scroll-down').animate({bottom: '20px'}, 250);
 				}, 350);
 			}, 0);
 		}
@@ -92,8 +138,18 @@ $('#pano').on('mousedown', function() {
 		$('body').removeClass('form-active');
 	});
 
+	$('#scroll-down').on('click', function() {
+		$('#first-screen').trigger('click');
+	});
+
+	$('#trigger-form').on('click', function() {
+		if (!Pano.isHidden) {
+			introHide();
+		}
+	});
+
+	/*
 	if (!Pano.support.touch) { // NEED SOMETHING BETTER TO DISTINGUISH
-		
 		$('#pano').on('keydown', function(e) {
 			if (!Pano.isHidden) { // ONLY HIDE ON ARROW KEYS DOWN
 				if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) {
@@ -107,15 +163,18 @@ $('#pano').on('mousedown', function() {
 			}
 		});
 
-		$('#pano').on('mouseup keyup', function() {
-			$('#pano').removeClass('moving');
-			if (Pano.isHidden) {
-				window.clearTimeout(Pano.textTimer); // CLEAR PREVIOUS TIMEOUT IF IT'S STILL IN PROGRESS
-				Pano.textTimer = window.setTimeout(function() {
-					introShow();
-				}, 4000);
-			}
+	*/
+		$('#pano').on('mousedown', function() {
+			$('#pano').addClass('moving');
+			if (Pano.isHidden) {}
 		});
+
+		$('#pano').on('mouseup', function() {
+			$('#pano').removeClass('moving');
+			if (Pano.isHidden) {}
+		});
+
+	/*
 
 	} else {
 		$('#pano').on('touchstart', function(e) {
@@ -132,5 +191,6 @@ $('#pano').on('mousedown', function() {
 			}
 		});
 	}
+	*/
 
 });
