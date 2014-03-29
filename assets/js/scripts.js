@@ -40,6 +40,7 @@ $(document).ready(function() {
 
 	window.setTimeout(function() {
 
+		/* SAVE FOR V.1
 		outL = { // OUTLINE LIVE
 			el: $('#outline-live')
 		};
@@ -60,7 +61,7 @@ $(document).ready(function() {
 			TweenMax.to(outT.el, 1,
 				{css: {'transform': 'translateY(-300px)', 'opacity': 1}}
 			), 200);
-
+		*/
 
 		$('.intro-bg').each(function(i, el) {
 			var newItem = {

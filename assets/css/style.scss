@@ -616,6 +616,9 @@ blockquote {
 		margin-top: 100px;
 		margin-bottom: 100px;
 	}
+	&.meet {
+		margin-bottom: 50px;
+	}
 	.box {
 		margin-left: 60px;
 		width: 900px;
@@ -653,7 +656,7 @@ blockquote {
 			background-size: cover;
 			height: 520px;
 			.overlay {
-				width: 380px;
+				width: 390px;
 				padding-top: 50px;
 				padding-bottom: 50px;
 			}
@@ -771,7 +774,8 @@ blockquote {
 	}
 	img {
 		position: absolute;
-		top: 200px;
+		// top: 200px;
+		top: 170px;
 		right: 0;
 	}
 	&.left {
@@ -779,7 +783,8 @@ blockquote {
 		img {
 			right: auto;
 			left: -150px;
-			top: 140px;
+			//top: 140px;
+			top: 0;
 		}
 	}
 }
@@ -793,6 +798,12 @@ blockquote {
 			opacity: 0.75;
 		}
 	}
+	.text {
+		width: 45%;
+	}
+	img {
+		top: 120px;
+	}
 }
 
 
@@ -800,11 +811,11 @@ blockquote {
 .outline-live {
 	float: right;
 	width: 320px;
-	margin-top: 252px;
+	// margin-top: 252px;
+	// opacity: 0;
 	margin-right: -20px;
-	opacity: 0;
 	&.outline-travel {
-		margin-top: 156px;
+		//margin-top: 156px;
 		width: 500px;
 		img {
 			right: -20px;
