@@ -17,7 +17,7 @@ $(document).ready(function() {
 			}
 			$(window).trigger('scroll'); // TRIGGER SCROLL ONCE TO NORMALIZE
 		}
-	}
+	};
 
 	var updateIntros = function() {
 		var windowH = $(window).height();
@@ -30,8 +30,8 @@ $(document).ready(function() {
 
 	window.addEventListener('resize:end', function(event) {
 		windowHeightSplit = $(window).height() / 2;
-  	updateIntros();
-  	updatePins();
+		updateIntros();
+		updatePins();
 	}, false);
 
 	windowHeightSplit = $(window).height() / 2;
@@ -39,29 +39,6 @@ $(document).ready(function() {
 	$('nav a').smoothScroll();
 
 	window.setTimeout(function() {
-
-		/* SAVE FOR V.1
-		outL = { // OUTLINE LIVE
-			el: $('#outline-live')
-		};
-		outL.top = outL.el.offset().top - (windowHeightSplit + 500);
-
-		outT = { // OUTLINE LIVE
-			el: $('#outline-travel')
-		};
-		outT.top = outT.el.offset().top - (windowHeightSplit + 300);
-
-
-		ctrl.addTween(outL.top,
-			TweenMax.to(outL.el, 1,
-				{css: {'transform': 'translateY(-300px)', 'opacity': 1}}
-			), 200);
-
-		ctrl.addTween(outT.top,
-			TweenMax.to(outT.el, 1,
-				{css: {'transform': 'translateY(-300px)', 'opacity': 1}}
-			), 200);
-		*/
 
 		$('.intro-bg').each(function(i, el) {
 			var newItem = {
@@ -79,96 +56,11 @@ $(document).ready(function() {
 
 		$(window).trigger('scroll');
 
-		/* INTRO VISION
-		======== 
-		var introVision = {
-			el: $('#intro-vision .bg')
-		};
-		introVision.top = $('#intro-vision h2').offset().top - (windowHeightSplit + 200);
-
-		ctrl.addTween(introVision.top,
-			TweenMax.to(introVision.el, 1,
-				{css: {'opacity': 0.1}}
-			), 500);
-
-		INTRO MEET
-		======== 
-		var introMeet = {
-			el: $('#intro-meet .bg')
-		};
-		introMeet.top = $('#intro-meet h2').offset().top - (windowHeightSplit + 200);
-
-		ctrl.addTween(introMeet.top,
-			TweenMax.to(introMeet.el, 1,
-				{css: {'opacity': 0.1}}
-			), 500);
-
-		INTRO LIVE
-		========
-		var introLive = {
-			el: $('#intro-live .bg')
-		};
-		introLive.top = $('#intro-live h2').offset().top - (windowHeightSplit + 200);
-
-		ctrl.addTween(introLive.top,
-			TweenMax.to(introLive.el, 1,
-				{css: {'opacity': 0.1}}
-			), 600);
-
-		INTRO TRAVEL
-		========
-		var introTravel = {
-			el: $('#intro-travel .bg')
-		};
-		introTravel.top = $('#intro-travel h2').offset().top - (windowHeightSplit + 200);
-
-		ctrl.addTween(introTravel.top,
-			TweenMax.to(introTravel.el, 1,
-				{css: {'opacity': 0.1}}
-			), 600);
-
-		INTRO PROJECT
-		========
-		var introProject = {
-			el: $('#intro-project .bg')
-		};
-		introProject.top = $('#intro-project h2').offset().top - (windowHeightSplit + 200);
-
-		ctrl.addTween(introProject.top,
-			TweenMax.to(introProject.el, 1,
-				{css: {'opacity': 0.1}}
-			), 600);
-		*/
-
-		/*
-		ctrl.addTween(firstImg.top,
-			TweenMax.to(firstImg.el, 1,
-				{css: {'transform': 'translateX(-0px) scale(1.1)'}}
-			), 600)
-		ctrl.addTween(secondImg.top,
-			TweenMax.to(secondImg.el, 1,
-				{css: {'transform': 'translateX(-20px) scale(1.1)'}}
-			), 600)
-		*/
-
 	}, 500);
 
 
 	var liveCam = {
-		months: [
-			'Januari',
-			'Februari',
-			'Mars',
-			'April',
-			'Maj',
-			'Juni',
-			'Juli',
-			'Augusti',
-			'September',
-			'Oktober',
-			'November',
-			'December'
-		],
+		months: ['Januari','Februari','Mars','April','Maj','Juni','Juli','Augusti','September','Oktober','November','December'],
 		init: function() {
 			$('.today').hover(
 				function() {
@@ -177,7 +69,6 @@ $(document).ready(function() {
 					var hours = (today.getHours().toString().length > 1) ? today.getHours() : '0' + today.getHours();
 					var minutes = (today.getMinutes().toString().length > 1) ? today.getMinutes() : '0' + today.getMinutes();
 					var seconds = (today.getSeconds().toString().length > 1) ? today.getSeconds() : '0' + today.getSeconds();
-					//var todaysDate = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
 					$('.today-time').text(hours + ':' + minutes + ':' + seconds);
 				}, function() {
 					window.setTimeout(function() {

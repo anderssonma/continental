@@ -6,17 +6,16 @@ var Pano = {
 $(document).ready(function (){
 
 	var krpano;
-
 	var panoReady = function(pano) {
+		
 		krpano = pano;
-
 		window.setTimeout(function() {
 			// SETUP ALL BINDINGS
 			// GIVE KRPANO A COUPLE OF MS TO FINISH
+			var $window = $(window),
+					windowH = $window.height() / 2;
 
-			var $window = $(window);
-			var windowH = $window.height() / 2;
-			$(window).on('scroll', function() {
+			$window.on('scroll', function() {
 				if (Pano.autoRotate && $window.scrollTop() > windowH) {
 					krpano.set('autorotate.enabled', false);
 					Pano.autoRotate = false;
@@ -24,7 +23,7 @@ $(document).ready(function (){
 					krpano.set('autorotate.enabled', true);
 					Pano.autoRotate = true;
 				}
-			})
+			});
 
 			// ZOOM IN/OUT BTNS
 			$('#pano-zoom-in').on('mousedown', function() {
@@ -63,7 +62,7 @@ $(document).ready(function (){
 			});
 
 		}, 250);
-	}
+	};
 
 	embedpano({swf:"assets/js/vendor/pano_sphere.swf", xml:"assets/js/vendor/pano_sphere.xml", target:"pano", html5:"prefer", passQueryParameters:true, wmode:"opaque", mwheel: false, onready:panoReady});
 	
@@ -74,14 +73,12 @@ $(document).ready(function (){
 	Pano.support.csstra = Modernizr.csstransitions;
 
 	// CACHE SELECTORS
-	var pano = $('#pano');
-	var panoWrap = $('#pano-wrap');
-
-	var introBox = $('#intro')
-
-	var btnIntroShow = $('#btn-show-intro');
-	var btnIntroHide = $('#btn-hide-intro');
-	var btnScrollDown = $('#btn-scroll-down');
+	var pano = $('#pano'),
+			panoWrap = $('#pano-wrap'),
+			introBox = $('#intro'),
+			btnIntroShow = $('#btn-show-intro'),
+			btnIntroHide = $('#btn-hide-intro'),
+			btnScrollDown = $('#btn-scroll-down');
 
 	var introHide = function() {
 		if (Pano.support.csstra) { // IF BETTER IE9 AND BELOW

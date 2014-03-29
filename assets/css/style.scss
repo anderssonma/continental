@@ -616,6 +616,10 @@ blockquote {
 			display: inline-block;
 			margin-left: 4px;
 		}
+		strong {
+			color: #AAA;
+			font-weight: normal;
+		}
 		&.last {
 			color: $blue-color;
 		}
@@ -1244,6 +1248,11 @@ blockquote {
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 			text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+			-webkit-transition: 0.65s all;
+			transition: 0.65s all;
+			&:hover {
+				opacity: 0.65;
+			}
 		}
 	}
 }
