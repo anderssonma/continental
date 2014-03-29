@@ -130,6 +130,11 @@ p {
 a {
 	color: #999;
 	text-decoration: none;
+	-webkit-transition: 0.35s color;
+	transition: 0.35s color;
+	&:hover {
+		color: #008fcc !important;
+	}
 }
 
 p.ingress {
@@ -302,6 +307,9 @@ nav {
 				transition: 0.35s all;
 				width: 32px;
 				opacity: 0.5;
+				&.last {
+					margin-top: 4px;
+				}
 			}
 		}
 		&.active a {
@@ -446,7 +454,7 @@ blockquote {
 	-moz-osx-font-smoothing: grayscale;
 	strong {
 		font-size: 14px;
-		color: #2990C8;
+		color: #008fcc;
 		display: inline-block;
 		margin: 14px 0 2px;
 	}
@@ -580,6 +588,12 @@ blockquote {
 		a {
 			color: #FFF;
 			opacity: 0.75;
+			-webkit-transition: 0.35s opacity;
+			transition: 0.35s opacity;
+			&:hover {
+				opacity: 0.5;
+				color: #FFF !important;
+			}
 		}
 	}
 }
@@ -732,7 +746,7 @@ blockquote {
 		h5 {
 			font-family: 'bau';
 			font-weight: normal;
-			color: #19A3D8;
+			color: #008fcc;
 			font-size: 14px;
 			margin: 0 60px 2px 0;
 			-webkit-transition: 0.35s all;
@@ -849,7 +863,7 @@ blockquote {
 			position: absolute;
 			top: 90px;
 			right: -75px;
-			background: #169AD2;
+			background: #008fcc;
 			width: 150px;
 			color: #FFF;
 			text-align: center;
@@ -872,7 +886,7 @@ blockquote {
 				height: 0; 
 				border-right: 6px solid transparent;
 				border-left: 6px solid transparent;
-				border-bottom: 6px solid #169AD2;
+				border-bottom: 6px solid #008fcc;
 			}
 		}
 	}
@@ -1063,40 +1077,39 @@ blockquote {
 		background: #FFF;
 		border-right: 2px solid #F5F5F5;
 		float: left;
-		-webkit-transition: 0.35s all;
-		transition: 0.35s all;
-	}
-	&:hover .preview {
-		background: #008FCC;
 	}
 	img {
 		width: 40px;
-		margin: 21px 0 0 21px;
+		margin: 23px 0 0 23px;
 	}
 	.meta {
 		width: 230px;
 		float: right;
-		border: 3px solid #FFF;
 		border-left: none;
 		height: 80px;
 		padding-left: 26px;
 	}
+	&:hover .meta {
+		h5, p {
+			color: #008fcc;
+		}
+	}
 	h5 {
 		font-family: 'bau';
 		font-size: 16px;
-		margin: 18px 0 3px;
-		font-weight: normal
+		margin: 21px 0 3px;
+		font-weight: normal;
+		-webkit-transition: 0.35s all;
+		transition: 0.35s all;
 	}
 	p {
 		margin: 0;
 		font-size: 13px;
 		color: $text-dark-alt;
+		-webkit-transition: 0.35s all;
+		transition: 0.35s all;
 	}
 }
-
-
-
-
 
 
 /* CONTACT */
@@ -1271,6 +1284,11 @@ blockquote {
 	img {
 		float: left;
 		margin: 0 27px;
+		-webkit-transition: 0.35s opacity;
+		transition: 0.35s opacity;
+		&:hover {
+			opacity: 0.75;
+		}
 	}
 	.jernhusen {
 		width: 130px;
