@@ -1145,9 +1145,9 @@ blockquote {
 		left: 0;
 		height: 240px;
 		width: 100%;
-		background: url(img/flyg_1440.jpg) no-repeat center;
+		background: url(img/newsletter_bg.jpg) no-repeat center;
 		background-size: cover;
-		-webkit-filter: grayscale(80%) brightness(30%);
+		//-webkit-filter: grayscale(80%) brightness(30%);
 		z-index: 1;
 		opacity: 0.5;
 	}
