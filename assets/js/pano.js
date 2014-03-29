@@ -1,15 +1,30 @@
 var Pano = {
-	isHidden: false
+	isHidden: false,
+	autoRotate: true
 };
 
 $(document).ready(function (){
 
+	var krpano;
+
 	var panoReady = function(pano) {
-		var krpano = pano;
+		krpano = pano;
 
 		window.setTimeout(function() {
 			// SETUP ALL BINDINGS
 			// GIVE KRPANO A COUPLE OF MS TO FINISH
+
+			var $window = $(window);
+			var windowH = $window.height() / 2;
+			$(window).on('scroll', function() {
+				if (Pano.autoRotate && $window.scrollTop() > windowH) {
+					krpano.set('autorotate.enabled', false);
+					Pano.autoRotate = false;
+				} else if (!Pano.autoRotate && !Pano.isHidden && $window.scrollTop() < windowH) {
+					krpano.set('autorotate.enabled', true);
+					Pano.autoRotate = true;
+				}
+			})
 
 			// ZOOM IN/OUT BTNS
 			$('#pano-zoom-in').on('mousedown', function() {
@@ -104,11 +119,19 @@ $(document).ready(function (){
 	$(btnIntroShow).on('click', function() {
 		if (Pano.isHidden) {
 			introShow();
+			window.setTimeout(function() {
+				krpano.set('autorotate.enabled', true);
+				Pano.autoRotate = true;
+			}, 0);
 		}
 	});
 	$(btnIntroHide).on('click', function() {
 		if (!Pano.isHidden) {
-			introHide();
+			krpano.set('autorotate.enabled', false);
+			Pano.autoRotate = false;
+			window.setTimeout(function() {
+				introHide();
+			}, 0);
 		}
 	});
 	// SCROLL TO FIRST SECTION
