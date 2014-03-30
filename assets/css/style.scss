@@ -61,6 +61,12 @@ body {
 	overflow-x: hidden;
 }
 
+@media only screen and (max-width: 767px) {
+	body {
+		margin-left: 0;
+	}
+}
+
 
 img {
 	/* width: 100%; */
@@ -219,6 +225,15 @@ p.ingress {
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	.intro-bg {
+		.box {
+			width: 80%;
+			max-width: 720px;
+		}
+	}
+}
+
 
 /* REMOVE LATER
 .spotify {
@@ -374,6 +389,12 @@ nav {
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	nav {
+		display: none;
+	}
+}
+
 
 
 .intro {
@@ -469,6 +490,28 @@ blockquote {
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	blockquote {
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		i {
+			width: 100%;
+			float: left;
+		}
+		.single-quote {
+			opacity: 0.5;
+			position: absolute;
+			bottom: 20px;
+			right: 0;
+			font-size: 100px;
+			width: 50px;
+		}
+	}
+	.architecht {
+		margin-left: 0;
+	}
+}
 
 .overlays {
 	width: 960px;
@@ -607,6 +650,15 @@ blockquote {
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	.overlays {
+		width: 100%;
+		max-width: 720px;
+		margin-left: -10%;
+		margin-right: -10%;
+	}
+}
+
 
 .train-table {
 	width: 100%;
@@ -724,6 +776,16 @@ blockquote {
 		img {
 			right: -20px;
 		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.outlines img {
+		display: none;
+	}
+	.outlines .text {
+		width: auto !important;
+		float: left !important;
 	}
 }
 
@@ -1080,6 +1142,7 @@ blockquote {
 	float: left;
 	background: #FFF;
 	cursor: pointer;
+	display: block;
 	&.last {
 		margin-right: 0;
 	}
@@ -1101,9 +1164,14 @@ blockquote {
 		border-left: none;
 		height: 80px;
 		padding-left: 26px;
+		span {
+			display: inline;
+			padding: 6px;
+			opacity: 0.5;
+		}
 	}
 	&:hover .meta {
-		h5, p {
+		h5, p, span {
 			color: #008fcc;
 		}
 	}
@@ -1381,15 +1449,10 @@ footer {
 
 
 @media only screen and (max-width: 767px) {
-	h2 {
-		font-size: 46px;
-	}
+
 	.sep h3 {
 		font-size: 36px;
 		text-align: left;
 		margin-bottom: 10px;
-	}
-	p {
-		font-size: 16px;
 	}
 }
