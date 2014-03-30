@@ -412,6 +412,15 @@ nav {
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	.sep {
+		width: 80%;
+		max-width: 720px;
+	}
+}
+
+
+
 
 blockquote {
 	font-family: 'bau';
@@ -512,9 +521,9 @@ blockquote {
 			}
 		}
 		&.box-hotels {
-			background: url(../img/vy_klarab_1440.jpg) no-repeat bottom center;
+			background: url(../img/offset_live.jpg) no-repeat bottom center;
 			background-size: cover;
-			height: 460px;
+			height: 440px;
 			margin-bottom: 30px;
 		}
 		&.box-meet {
@@ -1374,10 +1383,6 @@ footer {
 @media only screen and (max-width: 767px) {
 	h2 {
 		font-size: 46px;
-	}
-	.sep {
-		width: 100%;
-		padding: 5% 5% 10% 5%;
 	}
 	.sep h3 {
 		font-size: 36px;
