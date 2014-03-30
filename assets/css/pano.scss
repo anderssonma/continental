@@ -88,15 +88,22 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1FBAE9', endColorstr='#004494',GradientType=0 );
 		width: 46px;
 		height: 44px;
-		line-height: 44px;
+		line-height: 42px;
 		text-align: center;
 		font-weight: bold;
 		font-size: 24px;
-		color: #84B5D7;
-		opacity: 0.9;
-		-webkit-transition: 0.35s color;
-		transition: 0.35s color;
+		color: #BACAD6;
+		opacity: 0.75;
 		border-right: 1px solid rgba(255,255,255,0.25);
+		-webkit-transition: 0.35s all;
+		transition: 0.35s all;
+		img {
+			text-align: center;
+			display: inline;
+			-webkit-transition: 0.35s opacity;
+			transition: 0.35s opacity;
+			opacity: 0.75;
+		}
 		&.last {
 			border-right: none;
 		}
@@ -107,9 +114,17 @@
 		&.minus {
 			line-height: 38px;
 		}
-		&:hover {
-			color: #FFF;
+		&.down, &.up {
+			line-height: 36px;
 		}
+		&:hover {
+			opacity: 1;
+			color: #FFF;
+			img {
+				opacity: 1;
+			}
+		}
+
 	}
 }
 .pano-bg.hide .controls {
