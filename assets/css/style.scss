@@ -807,24 +807,24 @@ blockquote {
 		left: 50%;
 		margin-left: -1px;
 		width: 2px;
-		background: rgba(0,0,0,0.1);
+		background: #DCDCDC;
 	}
 	.timestamp {
 		position: absolute;
 		width: 50%;
 		top: 0px;
 		text-align: center;
+		padding-right: 60px;
 		h5 {
 			font-family: 'bau';
 			font-weight: normal;
 			color: #008fcc;
 			font-size: 14px;
-			margin: 0 60px 2px 0;
+			margin: 0 0 2px 0;
 			-webkit-transition: 0.35s all;
 			transition: 0.35s all;
 		}
 		h6 {
-			margin-right: 60px;
 			color: #333;
 			font-weight: normal;
 			font-size: 20px;
@@ -834,7 +834,6 @@ blockquote {
 		p {
 			margin-top: 8px;
 			font-size: 14px;
-			margin-right: 60px;
 			color: #666;
 		}
 		.text {
@@ -842,16 +841,9 @@ blockquote {
 			transition: 0.35s opacity;
 		}
 		hr {
-		width: 40px;
-		margin-left: 130px;
-		border: none;
-		border-bottom: 1px solid #CCC;
-		}
-		&.timestamp-right {
-			hr {
-				margin-left: auto;
-				margin-right: 130px;
-			}
+			width: 40px;
+			border: none;
+			border-bottom: 1px solid #CCC;
 		}
 		.mark {
 			position: absolute;
@@ -862,7 +854,7 @@ blockquote {
 			margin-left: -8px;
 			background: #F5F5F5;
 			border-radius: 100%;
-			border: 2px solid rgba(0,0,0,0.1);
+			border: 2px solid #DCDCDC;
 			line-height: 46px;
 			text-align: center;
 			font-size: 13px;
@@ -882,7 +874,7 @@ blockquote {
 				display: block;
 				width: 50px;
 				height: 1px;
-				background: rgba(0,0,0,.075);
+				background: #DCDCDC;
 			}
 		}
 	}
@@ -917,9 +909,9 @@ blockquote {
 	.mark:after {
 		left: 13px;
 	}
-	h5, h6, p {
-		margin-left: 60px;
-		margin-right: 0;
+	.text {
+		padding-right: 0;
+		padding-left: 60px;
 	}
 }
 
@@ -1007,6 +999,7 @@ blockquote {
 			padding: 3px 0 5px;
 			border-radius: 3px;
 			color: #555;
+			z-index: 4;
 		}
 		object {
 			position: absolute;
@@ -1040,6 +1033,9 @@ blockquote {
 				-webkit-transition: 0.35s 0.25s bottom;
 				transition: 0.35s 0.25s all;
 			}
+			object {
+				z-index: 3;
+			}
 		}
 	}
 }
@@ -1053,6 +1049,11 @@ blockquote {
   -ms-touch-action: none;
 	touch-action: none;
 	box-shadow: 0 0 3.125em rgba( 0, 0, 0, .75 ); /* 50 */
+}
+.no-placeholder #imagelightbox {
+	// IE9 HACK
+	-ms-transform: translateX(-50%);
+	left: 50%;
 }
 /* WITH ACTIVITY INDICATION */
 #imagelightbox-loading,
@@ -1447,6 +1448,13 @@ blockquote {
 			font-size: 16px;
 		}
 	}
+	label {
+		position: absolute;
+		top: 154px;
+		left: 474px;
+		color: #FFF;
+		display: none;
+	}
 	input {
 		display: block;
 		float: right;
@@ -1482,6 +1490,10 @@ blockquote {
 			}
 		}
 	}
+}
+
+.no-placeholder .newsletter label {
+	display: block;
 }
 
 

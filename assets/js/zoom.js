@@ -69,13 +69,16 @@ $(document).ready(function() {
 		$('#imagelightbox-nav').remove();
 	};
 
-	var selectorF = '.images a';
-	var instanceF = $(selectorF).imageLightbox({
-		onStart:			function() {overlayOn(); closeButtonOn( instanceF ); navigationOn( instanceF, selectorF );},
-		onEnd:				function() {overlayOff(); captionOff(); closeButtonOff(); navigationOff(); activityIndicatorOff();},
-		onLoadStart:	function() {captionOff(); activityIndicatorOn();},
-		onLoadEnd:		function() {captionOn(); navigationUpdate( selectorF ); activityIndicatorOff();}
-	});
+	if (window.addEventListener) {
+		// DONT RUN ON IE8
+		var selectorF = '.images a';
+		var instanceF = $(selectorF).imageLightbox({
+			onStart:			function() {overlayOn(); closeButtonOn( instanceF ); navigationOn( instanceF, selectorF );},
+			onEnd:				function() {overlayOff(); captionOff(); closeButtonOff(); navigationOff(); activityIndicatorOff();},
+			onLoadStart:	function() {captionOff(); activityIndicatorOn();},
+			onLoadEnd:		function() {captionOn(); navigationUpdate( selectorF ); activityIndicatorOff();}
+		});
+	}
 });
 
 /*
