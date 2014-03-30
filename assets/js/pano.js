@@ -75,6 +75,7 @@ $(document).ready(function (){
 	// CACHE SELECTORS
 	var pano = $('#pano'),
 			panoWrap = $('#pano-wrap'),
+			panoCtrls = $('#pano-ctrls'),
 			introBox = $('#intro'),
 			btnIntroShow = $('#btn-show-intro'),
 			btnIntroHide = $('#btn-hide-intro'),
@@ -86,10 +87,11 @@ $(document).ready(function (){
 		} else {
 			$(panoWrap).addClass('panning');
 			window.setTimeout(function() {
-			$(introBox).animate({opacity: 0, marginTop: '-985px'}, 500);
-			$(btnScrollDown).animate({bottom: '-100px'}, 250);
+				$(introBox).animate({opacity: 0, marginTop: '-985px'}, 500);
+				$(btnScrollDown).animate({bottom: '-100px'}, 250);
 				window.setTimeout(function() {
 					$(btnIntroShow).animate({top: 0}, 250);
+					$(panoCtrls).animate({bottom: 10}, 250);
 				}, 350);
 			}, 0);
 		}
@@ -103,6 +105,7 @@ $(document).ready(function (){
 			$(panoWrap).removeClass('panning');
 			window.setTimeout(function() {
 				$(btnIntroShow).animate({top: '-50px'}, 250);
+				$(panoCtrls).animate({bottom: -110}, 250);
 				window.setTimeout(function() {
 					$(introBox).animate({opacity: 1, marginTop: '-185px'}, 250);
 					$(btnScrollDown).animate({bottom: '20px'}, 250);

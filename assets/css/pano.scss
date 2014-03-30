@@ -70,10 +70,10 @@
 	left: 50%;
 	z-index: 1;
 	margin-left: -138px;
-	-webkit-transition: 0.5s -webkit-transform;
-	transition: 0.5s transform;
+	-webkit-transition: 0.5s all;
+	transition: 0.5s all;
 	padding: 0;
-
+	height: 44px;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
@@ -84,8 +84,8 @@
 		float: left;
 		cursor: pointer;
 		display: block;
-		background: -webkit-linear-gradient(bottom, #004494 0%, #1fbae9 100%);
 		background: linear-gradient(to top, #004494 0%, #1fbae9 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1FBAE9', endColorstr='#004494',GradientType=0 );
 		width: 46px;
 		height: 44px;
 		line-height: 44px;
@@ -113,9 +113,7 @@
 	}
 }
 .pano-bg.hide .controls {
-	-webkit-transform: translateY(-110px);
-	-ms-transform: translateY(-110px);
-	transform: translateY(-110px);
+	bottom: 10px;
 }
 
 

@@ -28,11 +28,19 @@ $(document).ready(function() {
 
 	updateIntros();
 
-	window.addEventListener('resize:end', function(event) {
-		windowHeightSplit = $(window).height() / 2;
-		updateIntros();
-		updatePins();
-	}, false);
+	if (window.addEventListener) {
+		window.addEventListener('resize:end', function(event) {
+			windowHeightSplit = $(window).height() / 2;
+			updateIntros();
+			updatePins();
+		}, false);
+	} else {
+		window.attachEvent('resize:end', function(event) {
+			windowHeightSplit = $(window).height() / 2;
+			updateIntros();
+			updatePins();
+		}, false);
+	}
 
 	windowHeightSplit = $(window).height() / 2;
 	var ctrl = $.superscrollorama();
