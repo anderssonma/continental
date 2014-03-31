@@ -10,7 +10,7 @@ $(document).ready(function() {
 		$('.mobile-nav').toggleClass('active');
 	});
 
-	$('nav a').smoothScroll();
+	$('.site-nav a').smoothScroll();
 
 	var desktopInit = function() {
 
