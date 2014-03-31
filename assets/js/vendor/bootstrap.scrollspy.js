@@ -146,7 +146,6 @@
   $(window).on('load', function () {
     $('[data-spy="scroll"]').each(function () {
       var $spy = $(this)
-      console.log($spy.data());
       $spy.scrollspy($spy.data())
     })
   })

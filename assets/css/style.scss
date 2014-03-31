@@ -227,10 +227,24 @@ p.ingress {
 
 @media only screen and (max-width: 767px) {
 	.intro-bg {
+		.bg {
+			opacity: 0.25;
+		}
+		.spacer {
+			height: 300px;
+		}
 		.box {
 			width: 80%;
 			max-width: 720px;
 		}
+		.box-header {
+			h3 {
+				font-size: 36px;
+			}
+		}
+	}
+	p.ingress {
+		font-size: 18px;
 	}
 }
 
@@ -280,15 +294,15 @@ p.ingress {
 
 
 // MAIN NAVIGATION
-nav {
+.site-nav {
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	bottom: 0;
 	z-index: 10;
 	width: 60px;
+	background: #008FCC;
 	background: linear-gradient(to top, #004494 0%, #1FBAE9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1FBAE9', endColorstr='#004494',GradientType=0 );
 	ul {
 		list-style: none;
 		padding: 0;
@@ -384,9 +398,62 @@ nav {
 	}
 }
 
+.mobile-nav, .mobile-nav-btn {
+	display: none;
+}
+
 @media only screen and (max-width: 767px) {
-	nav {
+	.site-nav {
 		display: none;
+	}
+	.mobile-nav-btn {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 100;
+		padding: 7px 0;
+		width: 50px;
+		height: 46px;
+		background: #FFF;
+		border-radius: 0 0 0 3px;
+		.line {
+			width: 30px;
+			height: 5px;
+			border-radius: 3px;
+			margin: 5px auto;
+			background: linear-gradient(to left, #004494 0%, #1fbae9 100%);
+		}
+	}
+	.mobile-nav {
+		display: block;
+		position: fixed;
+		top: -400px;
+		left: 0;
+		z-index: 90;
+		width: 100%;
+		padding: 10px 0;
+		background: linear-gradient(to top, #004494 0%, #1fbae9 100%);
+		-webkit-transition: 0.5s all;
+		transition: 0.5s all;
+		opacity: 0.9;
+		li {
+			list-style: none;
+			padding: 10px 0;
+			span {
+				color: #FFF;
+				font-size: 18px;
+				text-transform: uppercase;
+				font-weight: bold;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+		&.active {
+			-webkit-transform: translateY(400px);
+			-ms-transform: translateY(400px);
+			transform: translateY(400px);
+		}
 	}
 }
 
@@ -696,6 +763,11 @@ blockquote {
 	}
 }
 
+@media only screen and (max-width: 767px) {
+	.train-table {
+		display: none;
+	}
+}
 
 .outlines {
 	width: 100%;
@@ -1241,6 +1313,27 @@ blockquote {
 	}
 }
 
+@media only screen and (max-width: 1100px) {
+	.gallery {
+		width: 100%;
+		max-width: 660px;
+		.zoom-img-wrap {
+			width: 50%;
+			height: auto;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.gallery {
+		display: none;
+	}
+}
+
+
+
 
 
 
@@ -1408,6 +1501,34 @@ blockquote {
 }
 
 
+@media only screen and (max-width: 1100px) {
+	.contact .sep {
+		width: 80%;
+		max-width: 660px;
+	}
+	.contact {
+		.person {
+			width: 100%;
+		}
+	}
+	.file {
+		width: 322px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.downloads {
+		display: none;
+	}
+	.timeline, .overlays {
+		display: none;
+	}
+	.contact {
+		.persons {
+			padding-top: 0;
+		}
+	}
+}
+
 
 /* NEWSLETTER */
 .newsletter {
@@ -1496,6 +1617,34 @@ blockquote {
 	display: block;
 }
 
+@media only screen and (max-width: 1100px) {
+	.newsletter {
+		height: auto;
+		.bg {
+			height: 100%;
+		}
+		.inner {
+			width: 80%;
+			padding-bottom: 103px;
+			padding-top: 50px;
+		}
+		h6 {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		input#mce-EMAIL {
+			float: none;
+			width: 100%;
+		}
+		input[type="submit"]{
+			position: absolute;
+			left: 0;
+			bottom: 50px;
+			height: 43px;
+		}
+	}
+}
+
 
 
 /* LOGOS */
@@ -1516,7 +1665,7 @@ blockquote {
 		position: relative;
 		z-index: 1;
 		width: 1040px;
-		margin: 40px auto;
+		margin: 40px auto 0;
 	}
 	h6 {
 		font-family: 'bau';
@@ -1531,7 +1680,7 @@ blockquote {
 	}
 	img {
 		float: left;
-		margin: 0 27px;
+		margin: 0 27px 0 0;
 		-webkit-transition: 0.35s opacity;
 		transition: 0.35s opacity;
 		&:hover {
@@ -1543,6 +1692,23 @@ blockquote {
 		margin-top: 10px;
 		margin-left: 0;
 	}
+	.strabag {
+		width: 90px;
+		margin-top: 14px;
+	}
+	.scandic {
+		width: 100px;
+		margin-top: 18px;
+		margin-right: 47px;
+	}
+	span {
+		font-weight: bold;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		margin-right: 10px;
+		padding-top: 24px;
+		display: inline-block;
+	}
 	.sl {
 		width: 60px;
 	}
@@ -1553,10 +1719,7 @@ blockquote {
 		width: 140px;
 		margin-top: 4px;
 	}
-	.strabag {
-		margin-top: 10px;
-		width: 90px;
-	}
+
 	.trafikverket {
 		width: 170px;
 		margin-top: 10px;
@@ -1610,11 +1773,17 @@ footer {
 
 
 
-@media only screen and (max-width: 767px) {
-
-	.sep h3 {
-		font-size: 36px;
-		text-align: left;
-		margin-bottom: 10px;
+@media only screen and (max-width: 1100px) {
+	footer .wrapper {
+		width: 80%;
+		.inner {
+			width: 100%;
+		}
+		small {
+			display: block;
+			margin-left: 0;
+			margin-top: 6px;
+			padding-bottom: 20px;
+		}
 	}
 }
