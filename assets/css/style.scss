@@ -133,6 +133,13 @@ p {
 	line-height: 1.5;
 }
 
+@media only screen and (max-width: 768px) {
+	p {
+		font-size: 14px;
+	}
+}
+
+
 a {
 	color: #999;
 	text-decoration: none;
@@ -249,12 +256,15 @@ p.ingress {
 		}
 		.box-header {
 			h3 {
-				font-size: 36px;
+				font-size: 26px;
+			}
+			strong {
+				font-size: 18px;
 			}
 		}
 	}
 	p.ingress {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
@@ -1210,6 +1220,9 @@ blockquote {
 			}
 			h6 {
 				font-size: 16px;
+			}
+			&.timestamp-today {
+				display: none;
 			}
 		}
 		.line, .mark {
