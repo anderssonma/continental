@@ -225,7 +225,15 @@ p.ingress {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1100px) {
+	.intro-bg {
+		.box {
+			width: 660px;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
 	.intro-bg {
 		.bg {
 			opacity: 0.25;
@@ -497,7 +505,13 @@ p.ingress {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1100px) {
+	.sep {
+		width: 660px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
 	.sep {
 		width: 80%;
 		max-width: 720px;
@@ -546,11 +560,31 @@ blockquote {
 	font-size: 14px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
 	strong {
 		font-size: 14px;
 		color: #008fcc;
 		display: inline-block;
 		margin: 14px 0 2px;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	blockquote {
+		width: 660px;
+		margin-left: 0;
+		font-size: 16px;
+		i {
+			line-height: 20px;
+		}
+		.single-quote {
+			font-size: 180px;
+			line-height: 190px;
+		}
+	}
+	.architecht {
+		margin-left: 100px;
+		font-size: 14px;
 	}
 }
 
@@ -715,6 +749,29 @@ blockquote {
 	}
 }
 
+@media only screen and (max-width: 1100px) {
+	.overlays {
+		width: 720px;
+		margin-left: -60px;
+		&.right {
+			margin-left: 0;
+		}
+		.box {
+			width: 660px;
+		}
+		.box-list {
+			margin-bottom: 440px;
+			.overlay {
+				width: 660px;
+				position: relative;
+				top: 480px;
+				left: auto !important;
+				right: auto !important;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 767px) {
 	.overlays {
 		width: 100%;
@@ -832,7 +889,6 @@ blockquote {
 	}
 }
 
-
 /* BO */
 .outline-live {
 	float: right;
@@ -846,6 +902,18 @@ blockquote {
 		img {
 			right: -20px;
 		}
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.outlines-meet {
+		img {
+			top: 150px;
+		}
+	}
+	.outlines-travel .outline-travel {
+		width: 420px;
+		left: -100px !important;
 	}
 }
 
@@ -976,6 +1044,7 @@ blockquote {
 // TIMESTAMP RIGHT
 .timeline .timestamp-right {
 	right: 0;
+	padding-right: 0;
 	.mark {
 		right: auto;
 		left: 0;
@@ -1111,6 +1180,13 @@ blockquote {
 				z-index: 3;
 			}
 		}
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.timeline {
+		width: 660px;
+		margin-right: 0;
 	}
 }
 
@@ -1328,16 +1404,23 @@ blockquote {
 		width: 100%;
 		max-width: 660px;
 		.zoom-img-wrap {
-			width: 50%;
+			width: 328px;
 			height: auto;
-			margin: 0;
+			margin: 0 0 4px 0;
+			float: left;
+			&:nth-child(odd) {
+				float: right;
+			}
+			&.last {
+				float: left;
+			}
 			img {
 				width: 100%;
 			}
 		}
 	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.gallery {
 		display: none;
 	}
@@ -1366,6 +1449,12 @@ blockquote {
 		width: 540px;
 		float: left;
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+	.media .downloads {
+		width: 660px;
 	}
 }
 
@@ -1446,7 +1535,6 @@ blockquote {
 	}
 }
 
-
 /* CONTACT */
 .contact {
 	overflow: hidden;
@@ -1514,8 +1602,7 @@ blockquote {
 
 @media only screen and (max-width: 1100px) {
 	.contact .sep {
-		width: 80%;
-		max-width: 660px;
+		width: 660px;
 	}
 	.contact {
 		.person {
@@ -1523,10 +1610,13 @@ blockquote {
 		}
 	}
 	.file {
-		width: 322px;
+		width: 326px;
+		&:nth-child(odd) {
+			margin-right: 0;
+		}
 	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.downloads {
 		display: none;
 	}
@@ -1592,6 +1682,7 @@ blockquote {
 		float: right;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
+		border-radius: 0;
 		&#mce-EMAIL {
 			background: #F8F8F8;
 			border: none;
@@ -1629,6 +1720,29 @@ blockquote {
 }
 
 @media only screen and (max-width: 1100px) {
+	.newsletter {
+		height: auto;
+		.bg {
+			height: 100%;
+		}
+		.inner {
+			width: 660px;
+			padding-bottom: 50px;
+			padding-top: 50px;
+		}
+		h6 {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		input#mce-EMAIL {
+			float: none;
+			width: 510px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
 	.newsletter {
 		height: auto;
 		.bg {
@@ -1782,8 +1896,25 @@ footer {
 }
 
 
-
 @media only screen and (max-width: 1100px) {
+	footer .wrapper {
+		width: 660px;
+		.inner {
+			width: 100%;
+		}
+		.text-logos {
+			clear: both;
+		}
+		small {
+			display: block;
+			margin-left: 0;
+			margin-top: 6px;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
 	footer .wrapper {
 		width: 80%;
 		.inner {
