@@ -211,8 +211,17 @@
 }
 
 @media only screen and (max-width: 767px) {
-	.intro p {
+	.intro {
+		h1 {
+			margin-bottom: 6px;
+		}
+		p {
 		display: none;
+		}
+		.btn-hide {
+			margin-top: 0;
+			font-size: 12px;
+		}
 	}
 }
 
@@ -306,6 +315,18 @@
 	transform: translateY(100px);
 }
 
+@media only screen and (max-width: 767px) {
+	.btn-scroll {
+		margin-left: -32px;
+		.read-more {
+			font-size: 12px;
+		}
+		img {
+			width: 26px;
+		}
+	}
+}
+
 @-webkit-keyframes arrowBounce {
 	from {
 		-webkit-transform: translateY(0px);
@@ -324,8 +345,6 @@
 	}
 }
 
-
-@media only screen and (max-width: 1024px) {}
 
 @media only screen and (max-width: 767px) {
 	.intro {

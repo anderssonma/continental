@@ -229,6 +229,8 @@ p.ingress {
 	.intro-bg {
 		.bg {
 			opacity: 0.25;
+			width: 100%;
+			background-attachment: scroll !important;
 		}
 		.spacer {
 			height: 300px;
