@@ -1317,8 +1317,9 @@ blockquote {
 	}
 	p {
 		clear: both;
-		font-size: 12px;
+		font-size: 11px;
 		padding-top: 16px;
+		margin-bottom: 0;
 	}
 }
 
@@ -1690,7 +1691,7 @@ blockquote {
 	}
 	img {
 		float: left;
-		margin: 0 27px 0 0;
+		margin: 0 25px 0 0;
 		-webkit-transition: 0.35s opacity;
 		transition: 0.35s opacity;
 		&:hover {
@@ -1708,14 +1709,13 @@ blockquote {
 	}
 	.scandic {
 		width: 100px;
-		margin-top: 18px;
-		margin-right: 47px;
+		margin-top: 19px;
 	}
 	span {
 		font-weight: bold;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		margin-right: 10px;
+		margin-right: 18px;
 		padding-top: 24px;
 		display: inline-block;
 	}
