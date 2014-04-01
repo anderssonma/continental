@@ -514,7 +514,6 @@ p.ingress {
 @media only screen and (max-width: 768px) {
 	.sep {
 		width: 80%;
-		max-width: 720px;
 	}
 }
 
@@ -1190,6 +1189,35 @@ blockquote {
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	.timeline {
+		width: 100%;
+		margin: 0 0 -50px 0;
+		height: auto;
+		h4 {
+			position: static;
+			margin-bottom: 20px;
+		}
+		.timestamp {
+			width: 100%;
+			position: static;
+			padding: 0 !important;
+			.text {
+				padding: 10px 0 !important;
+			}
+			h5 {
+				font-size: 12px;
+			}
+			h6 {
+				font-size: 16px;
+			}
+		}
+		.line, .mark {
+			display: none;
+		}
+	}
+}
+
 
 
 #imagelightbox {
@@ -1617,15 +1645,31 @@ blockquote {
 	}
 }
 @media only screen and (max-width: 768px) {
-	.downloads {
-		display: none;
+	.contact .sep {
+		width: 80%;
 	}
-	.timeline, .overlays {
-		display: none;
+	.media {
+		width: 100%;
+	}
+	.media .downloads {
+		overflow: hidden;
+	}
+	.file {
+		width: 100%;
+		float: none;
+		.preview {
+			display: none;
+		}
+		.meta {
+			float: none;
+			width: 100%;
+			height: 60px;
+		}
 	}
 	.contact {
 		.persons {
 			padding-top: 0;
+			margin-top: 0;
 		}
 	}
 }
