@@ -1308,10 +1308,17 @@ blockquote {
 		cursor: zoom-in;
 	}
 	.zoom-img-wrap {
-		width: 320px;
+		width: 317px;
 		height: 220px;
 		display: block;
 		float: left;
+		margin: 0 3px 3px 0;
+		overflow: hidden;
+	}
+	p {
+		clear: both;
+		font-size: 12px;
+		padding-top: 16px;
 	}
 }
 
@@ -1322,6 +1329,7 @@ blockquote {
 		.zoom-img-wrap {
 			width: 50%;
 			height: auto;
+			margin: 0;
 			img {
 				width: 100%;
 			}
