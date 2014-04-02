@@ -227,9 +227,6 @@ p.ingress {
 			border-bottom: 1px solid #FFF;
 		}
 	}
-	.box-50 p {
-		width: 50%;
-	}
 }
 
 @media only screen and (max-width: 1100px) {
@@ -487,9 +484,7 @@ p.ingress {
 	overflow: hidden;
 	width: 100%;
 }
-.intro-collage {
-	margin-left: -100px;
-}
+
 
 
 .alt-bg {
@@ -501,15 +496,6 @@ p.ingress {
 	width: 720px;
 	margin: 0 auto;
 	padding: 50px 0 100px;
-	&.sep-130 {
-		padding: 130px 0;
-	}
-	&.sep-top-40 {
-		padding-top: 40px;
-	}
-	&.sep-bot-130 {
-		padding-bottom: 130px;
-	}
 	&.sep-bot-50 {
 		padding-bottom: 50px;
 	}
@@ -735,11 +721,6 @@ blockquote {
 		padding: 60px;
 		opacity: 0.9;
 		h4 {
-			color: #FFF;
-		}
-		h5 {
-			font-size: 18px;
-			font-family: 'bau';
 			color: #FFF;
 		}
 		p {
@@ -1094,9 +1075,6 @@ blockquote {
 .timeline {
 	.timestamp-today {
 		top: 160px;
-		h5 {
-			margin-top: 12px;
-		}
 		.today-text {
 			position: absolute;
 			top: 90px;
@@ -1851,108 +1829,17 @@ blockquote {
 }
 
 
-
-/* LOGOS */
-.logos {
-	width: 100%;
-	margin: 0 auto;
-	height: auto;
-	position: relative;
-	.bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-size: cover;
-	}
-	.inner {
-		position: relative;
-		z-index: 1;
-		width: 1040px;
-		margin: 40px auto 0;
-	}
-	h6 {
-		font-family: 'bau';
-		color: #FFF;
-		font-size: 18px;
-		text-transform: uppercase;
-		text-align: center;
-		border-bottom: 1px solid #000;
-		padding-bottom: 30px;
-		width: 800px;
-		margin-bottom: 40px;
-	}
-	img {
-		float: left;
-		margin: 0 25px 0 0;
-		-webkit-transition: 0.35s opacity;
-		transition: 0.35s opacity;
-		&:hover {
-			opacity: 0.75;
-		}
-	}
-	.jernhusen {
-		width: 130px;
-		margin-top: 10px;
-		margin-left: 0;
-	}
-	.strabag {
-		width: 90px;
-		margin-top: 14px;
-	}
-	.scandic {
-		width: 100px;
-		margin-top: 19px;
-	}
-	span {
-		font-weight: bold;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		margin-right: 18px;
-		padding-top: 24px;
-		display: inline-block;
-	}
-	.sl {
-		width: 60px;
-	}
-	.landsting {
-		width: 100px;
-	}
-	.stockholm-stad {
-		width: 140px;
-		margin-top: 4px;
-	}
-
-	.trafikverket {
-		width: 170px;
-		margin-top: 10px;
-		margin-right: 0;
-	}
-}
-
-
-
 /* FOOTER */
 footer {
 	position: relative;
 	background: #111;
 	height: auto;
 	overflow: hidden;
-	.gradient {
-		width: 100%;
-		height: 4px;
-		background: linear-gradient(to right, #1A579E 0%, #35C1EB 100%);
-	}
 	.wrapper {
 		width: 960px;
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
-		> a {
-			float: left;
-			margin-top: 20px;
-		}
 	}
 	p {
 		float: left;
@@ -1972,6 +1859,57 @@ footer {
 	small {
 		margin-left: 20px;
 		color: #666;
+	}
+		/* LOGOS */
+	.logos {
+		width: 100%;
+		margin: 0 auto;
+		height: auto;
+		position: relative;
+		.bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-size: cover;
+		}
+		.inner {
+			position: relative;
+			z-index: 1;
+			width: 1040px;
+			margin: 40px auto 0;
+		}
+		img {
+			float: left;
+			margin: 0 25px 0 0;
+			-webkit-transition: 0.35s opacity;
+			transition: 0.35s opacity;
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+		.jernhusen {
+			width: 130px;
+			margin-top: 10px;
+			margin-left: 0;
+		}
+		.strabag {
+			width: 90px;
+			margin-top: 14px;
+		}
+		.scandic {
+			width: 100px;
+			margin-top: 19px;
+		}
+		span {
+			font-weight: bold;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			margin-right: 18px;
+			padding-top: 24px;
+			display: inline-block;
+		}
 	}
 }
 
