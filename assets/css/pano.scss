@@ -66,7 +66,7 @@
 	transition: 0.35s 0.15s all;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.logo {
 		right: auto;
 		left: 30px;
@@ -215,8 +215,15 @@
 
 @media only screen and (max-width: 767px) {
 	.intro {
+		width: 80%;
+		height: 165px;
+		margin: -80px 0 0;
+		left: 10%;
 		h1 {
-			margin-bottom: 6px;
+			max-width: 300px;
+			margin: 0 auto 6px;
+			font-size: 40px;
+			line-height: 40px;
 		}
 		p {
 		display: none;
@@ -225,8 +232,16 @@
 			margin-top: 0;
 			font-size: 12px;
 		}
+		span {
+			font-size: 18px;
+		}
+	}
+	// HIDE CONTROLS ON MOBILE
+	.controls {
+		display: none;
 	}
 }
+
 
 .pano-bg.hide .intro {
 	-webkit-transform: translateY(-800px);
@@ -345,27 +360,5 @@
 	}
 	to {
 		-webkit-transform: translateY(-6px);
-	}
-}
-
-
-@media only screen and (max-width: 767px) {
-	.intro {
-		width: 80%;
-		margin: 0;
-		left: 10%;
-		top: 30%; 
-		h1 {
-			font-size: 40px;
-			line-height: 40px;
-		}
-		span {
-			font-size: 18px;
-		}
-	}
-
-	// HIDE CONTROLS ON MOBILE
-	.controls {
-		display: none;
 	}
 }

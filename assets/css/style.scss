@@ -61,7 +61,7 @@ body {
 	overflow-x: hidden;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	body {
 		margin-left: 0;
 	}
@@ -114,6 +114,9 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+	h4 {
+		font-size: 18px;
+	}
 	p {
 		font-size: 14px;
 	}
@@ -212,6 +215,7 @@ p.ingress {
 @media only screen and (max-width: 1100px) {
 	.intro-bg {
 		.bg {
+			opacity: 0.25;
 			background-attachment: scroll !important;
 		}
 		.box {
@@ -357,7 +361,7 @@ p.ingress {
 	display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.site-nav {
 		display: none;
 	}
@@ -367,17 +371,35 @@ p.ingress {
 		top: 0;
 		right: 0;
 		z-index: 100;
-		padding: 7px 0;
+		padding: 12px 0;
 		width: 50px;
-		height: 46px;
 		background: #FFF;
 		border-radius: 0 0 0 3px;
 		.line {
 			width: 30px;
 			height: 5px;
 			border-radius: 3px;
-			margin: 5px auto;
+			margin: 3px auto;
 			background: linear-gradient(to left, #004494 0%, #1fbae9 100%);
+			-webkit-transition: 0.35s all;
+		}
+		.line-top {
+			-webkit-transform-origin: top left;
+		}
+		.line-bot {
+			-webkit-transform-origin: bottom left;
+		}
+		&.active {
+			.line-top {
+				-webkit-transform: rotate(45deg) translateX(3px) translateY(-6px);
+			}
+			.line-mid {
+				-webkit-transform: scale(0);
+				opacity: 0;
+			}
+			.line-bot {
+				-webkit-transform: rotate(-45deg) translateX(3px) translateY(6px);
+			}
 		}
 	}
 	.mobile-nav {
@@ -387,11 +409,14 @@ p.ingress {
 		left: 0;
 		z-index: 90;
 		width: 100%;
-		padding: 10px 0;
+		padding: 0 10%;
 		background: linear-gradient(to top, #004494 0%, #1fbae9 100%);
 		-webkit-transition: 0.5s all;
 		transition: 0.5s all;
 		opacity: 0.9;
+		ul {
+			padding: 10px 0;
+		}
 		li {
 			list-style: none;
 			padding: 10px 0;
@@ -448,6 +473,7 @@ p.ingress {
 @media only screen and (max-width: 768px) {
 	.sep {
 		width: 80%;
+		padding-bottom: 50px;
 	}
 }
 
@@ -521,11 +547,12 @@ blockquote {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	blockquote {
 		width: 100%;
-		margin: 0 auto;
+		margin: -20px auto 0;
 		position: relative;
+		font-size: 14px;
 		i {
 			width: 100%;
 			float: left;
@@ -537,6 +564,8 @@ blockquote {
 			right: 0;
 			font-size: 100px;
 			width: 50px;
+			line-height: 84px;
+			display: none;
 		}
 	}
 	.architecht {
@@ -676,6 +705,9 @@ blockquote {
 			}
 		}
 	}
+	.overlay-small {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 1100px) {
@@ -685,11 +717,15 @@ blockquote {
 		&.right {
 			margin-left: 0;
 		}
+		&.overflow {
+			margin: 60px 0;
+		}
 		.box {
 			width: 660px;
 		}
 		.box-list {
-			margin-bottom: 440px;
+			margin-bottom: 410px;
+			margin-top: 100px;
 			.overlay {
 				width: 660px;
 				position: relative;
@@ -702,11 +738,11 @@ blockquote {
 			width: 355px;
 		}
 		.box-hotels .overlay {
-			width: 280px;
+			width: 360px;
 		}
 		.box.box-station .overlay {
 			top: 0;
-			width: 440px;
+			width: 460px;
 			right: 0;
 			bottom: 0;
 		}
@@ -721,12 +757,73 @@ blockquote {
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.overlays {
 		width: 100%;
-		max-width: 720px;
-		margin-left: -10%;
-		margin-right: -10%;
+		margin-left: 0;
+		&.meet {
+			margin-bottom: 30px;
+		}
+		&.first {
+			margin-top: 0;
+		}
+		&.last {
+			margin: 30px 0;
+		}
+		.box {
+			width: 100%;
+			margin: 0;
+			&.box-location {
+				height: 330px;
+				background-position: 80% 20%;
+				margin: 0 0 30px;
+			}
+			&.box-meet {
+				margin: 30px 0;
+				height: 250px;
+				background-position: top right;
+			}
+			&.box-hotels {
+				margin-top: 20px;
+				height: 250px;
+				background-position: 70% 50%;
+			}
+			&.box-station {
+				height: 250px;
+				margin: 30px 0;
+			}
+			&.box-list {
+				height: auto;
+				padding: 10% 0 20%;
+				img {
+					position: static;
+					left: auto;
+					top: auto;
+					width: 80%;
+					margin-left: 10%;
+				}
+			}
+		}
+		.overlay {
+			display: none;
+		}
+		.overlay-small {
+			display: block;
+			ul {
+				list-style: none;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				li {
+					color: $text-dark-alt;
+					font-size: 14px;
+					margin: 10px 0;
+				}
+				strong {
+					color: $text-dark;
+				}
+			}
+		}
 	}
 }
 
@@ -772,11 +869,41 @@ blockquote {
 		font-weight: normal;
 		font-size: 20px;
 	}
+	.label-small {
+		display: none;
+	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.train-table {
-		display: none;
+		margin: 20px 0 30px;
+		th {
+			font-size: 16px;
+		}
+		tr td {
+			width: auto;
+			font-size: 11px;
+			&.last span {
+				font-size: 9px;
+				margin-top: 0;
+			}
+			span {
+				margin: 2px 0 0;
+				font-size: 9px;
+				display: block;
+				display: none;
+			}
+			&.first {
+				min-width: 140px;
+				width: 50%;
+			}
+		}
+		.label-large {
+			display: none;
+		}
+		.label-small {
+			display: inline;
+		}
 	}
 }
 
@@ -861,13 +988,16 @@ blockquote {
 	}
 }
 
-@media only screen and (max-width: 767px) {
-	.outlines img {
-		display: none;
-	}
-	.outlines .text {
-		width: auto !important;
-		float: left !important;
+@media only screen and (max-width: 768px) {
+	.outlines {
+		height: auto !important;
+		img {
+			display: none;
+		}
+		.text {
+			width: auto !important;
+			float: none !important;
+		}
 	}
 }
 
@@ -1138,6 +1268,7 @@ blockquote {
 		h4 {
 			position: static;
 			margin-bottom: 20px;
+			margin-top: 10px;
 		}
 		.timestamp {
 			width: 100%;
@@ -1589,9 +1720,11 @@ blockquote {
 @media only screen and (max-width: 768px) {
 	.contact .sep {
 		width: 80%;
+		padding-top: 20px;
 	}
 	.media {
 		width: 100%;
+		margin-bottom: 0;
 	}
 	.media .downloads {
 		overflow: hidden;
@@ -1610,7 +1743,7 @@ blockquote {
 	}
 	.contact {
 		.persons {
-			padding-top: 0;
+			padding-top: 60px;
 			margin-top: 0;
 		}
 	}

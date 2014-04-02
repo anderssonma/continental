@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-	$('.mobile-nav-btn').on('click', function() {
-		$('.mobile-nav').toggleClass('active');
+	$('.mobile-nav-btn, .mobile-nav li').on('click', function() {
+		$('.mobile-nav, .mobile-nav-btn').toggleClass('active');
 	});
 
 	$('.site-nav a').smoothScroll();
