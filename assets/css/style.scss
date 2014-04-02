@@ -234,6 +234,9 @@ p.ingress {
 
 @media only screen and (max-width: 1100px) {
 	.intro-bg {
+		.bg {
+			background-attachment: scroll !important;
+		}
 		.box {
 			width: 660px;
 		}
@@ -776,6 +779,26 @@ blockquote {
 				top: 480px;
 				left: auto !important;
 				right: auto !important;
+			}
+		}
+		.box.box-meet .overlay {
+			width: 355px;
+		}
+		.box-hotels .overlay {
+			width: 280px;
+		}
+		.box.box-station .overlay {
+			top: 0;
+			width: 440px;
+			right: 0;
+			bottom: 0;
+		}
+		.overlay {
+			padding: 40px;
+			width: 330px;
+			left: 0;
+			a {
+				font-size: 14px;
 			}
 		}
 	}
