@@ -69,7 +69,6 @@ body {
 
 
 img {
-	/* width: 100%; */
 	display: block;
 }
 
@@ -88,23 +87,6 @@ h3 {
 
 // H2 ARE ONLY USED ON FULL-SCREEN IMG SEPARATORS
 h2 {
-	/*
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	height: 140px;
-	display: block;
-	color: $text-light;
-	font-size: 30px;
-	margin: -70px 0 0;
-	text-shadow: 0 1px 0 #999;
-	letter-spacing: 2px;
-	opacity: 1;
-	font-family: 'bau';
-	opacity: 0.5;
-	*/
 	margin-bottom: 60px;
 	font-size: 24px;
 	color: #FFF;
@@ -121,8 +103,6 @@ h4 {
 	font-size: 20px;
 	margin: 0;
 	font-family: 'bau';
-
-	//text-align: center;
 }
 
 p {
@@ -141,12 +121,12 @@ p {
 
 
 a {
-	color: #999;
+	color: $blue-color;
 	text-decoration: none;
 	-webkit-transition: 0.35s color;
 	transition: 0.35s color;
 	&:hover {
-		color: #008fcc !important;
+		color: #999;
 	}
 }
 
@@ -267,51 +247,6 @@ p.ingress {
 		font-size: 16px;
 	}
 }
-
-
-/* REMOVE LATER
-.spotify {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,.85);
-	z-index: 99;
-	display: block;
-}
-.spotify #spotify-close {
-	position: absolute;
-	top: 50px;
-	right: 50px;
-	width: 50px;
-	height: 50px;
-}
-.spotify-inner {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 600px;
-	height: 450px;
-	margin: -225px 0 0 -300px;
-	z-index: 999;
-}
-.spotify h3 {
-	font-size: 42px;
-	color: #FFF;
-	text-align: center;
-}
-.spotify p {
-	color: #FFF;
-	text-align: center;
-}
-.spotify iframe {
-	width: 300px;
-	margin: 50px auto 0;
-	display: block;
-}
-*/
-
 
 // MAIN NAVIGATION
 .site-nav {
@@ -561,7 +496,7 @@ blockquote {
 	font-size: 16px;
 	strong {
 		font-size: 14px;
-		color: #008fcc;
+		color: $text-dark-alt;
 		display: inline-block;
 		margin: 14px 0 2px;
 	}
@@ -732,10 +667,11 @@ blockquote {
 		a {
 			color: #FFF;
 			opacity: 0.75;
+			font-weight: bold;
 			-webkit-transition: 0.35s opacity;
 			transition: 0.35s opacity;
 			&:hover {
-				opacity: 0.5;
+				opacity: 1;
 				color: #FFF !important;
 			}
 		}
@@ -817,7 +753,10 @@ blockquote {
 			font-weight: normal;
 		}
 		&.last {
-			color: $blue-color;
+			font-weight: bold;
+			span {
+				font-weight: normal;
+			}
 		}
 	}
 	tbody tr {
@@ -865,7 +804,6 @@ blockquote {
 	}
 	img {
 		position: absolute;
-		// top: 200px;
 		top: 170px;
 		right: 0;
 	}
@@ -874,7 +812,6 @@ blockquote {
 		img {
 			right: auto;
 			left: -150px;
-			//top: 140px;
 			top: 0;
 		}
 	}
@@ -906,15 +843,9 @@ blockquote {
 .outline-live {
 	float: right;
 	width: 320px;
-	// margin-top: 252px;
-	// opacity: 0;
 	margin-right: -20px;
 	&.outline-travel {
-		//margin-top: 156px;
 		width: 500px;
-		img {
-			right: -20px;
-		}
 	}
 }
 
@@ -973,7 +904,6 @@ blockquote {
 		h5 {
 			font-family: 'bau';
 			font-weight: normal;
-			color: #008fcc;
 			font-size: 14px;
 			margin: 0 0 2px 0;
 			-webkit-transition: 0.35s all;
@@ -1528,9 +1458,6 @@ blockquote {
 	background: #FFF;
 	cursor: pointer;
 	display: block;
-	&.last {
-		margin-right: 0;
-	}
 	.preview {
 		width: 84px;
 		height: 80px;
@@ -1624,15 +1551,16 @@ blockquote {
 		}
 	}
 	span, a {
-		color: $text-dark-alt;
 		display: block;
 		font-weight: normal;
 		font-size: 14px;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
+	span {
+		color: $text-dark-alt;
+	}
 	a {
-		color: #999;
 		text-decoration: none;
 		margin-top: 2px;
 	}
@@ -1840,6 +1768,12 @@ footer {
 		margin: 0 auto;
 		position: relative;
 		overflow: hidden;
+	}
+	a {
+		color: #999;
+		&:hover {
+			color: #008fcc;
+		}
 	}
 	p {
 		float: left;
