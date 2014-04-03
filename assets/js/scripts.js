@@ -6,6 +6,8 @@ $(document).ready(function() {
 
 	$('.site-nav a').smoothScroll();
 
+	console.log(Modernizr);
+
 	var desktopInit = function() {
 
 		var windowHeightSplit,

@@ -357,6 +357,19 @@ p.ingress {
 	}
 }
 
+// NO SVG FALLBACK
+.site-nav .png {
+	display: none;
+}
+.no-svg .site-nav {
+	.png {
+		display: inline-block;
+	}
+	.svg {
+		display: none;
+	}
+}
+
 .mobile-nav, .mobile-nav-btn {
 	display: none;
 }
