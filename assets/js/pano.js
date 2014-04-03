@@ -146,6 +146,4 @@ $(document).ready(function (){
 		$(pano).removeClass('moving');
 	});
 
-	// if (!Pano.support.touch) {} FOR MOBILE/DESKTOP FUNCTIONALITY
-
 });

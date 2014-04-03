@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var hasFlashSupport = function() {
 		if (window.ActiveXObject) {
 			try {
-				new ActiveXObject(pluginList[p].activex);
+				new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
 				return true;
 			} catch(e) {
 				return false;
@@ -64,13 +64,13 @@ $(document).ready(function() {
 		updateIntros();
 
 		if (window.addEventListener) {
-			window.addEventListener('resize:end', function(event) {
+			window.addEventListener('resize:end', function() {
 				windowHeightSplit = $(window).height() / 2;
 				updateIntros();
 				updatePins();
 			}, false);
 		} else {
-			window.attachEvent('resize:end', function(event) {
+			window.attachEvent('resize:end', function() {
 				windowHeightSplit = $(window).height() / 2;
 				updateIntros();
 				updatePins();
