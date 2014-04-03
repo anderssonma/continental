@@ -12,7 +12,7 @@
 				</div>
 				<div class="answer">
 					<h5>Why am I hearing different tracks?</h5>
-					<p>When you press play you’ll hear a  mix of that album or artist plus similar tracks. You'll also receive some suggested tracks when listening to albums with less than 12 tracks.</p>
+					<p>When you press play you’ll hear a	mix of that album or artist plus similar tracks. You'll also receive some suggested tracks when listening to albums with less than 12 tracks.</p>
 				</div>
 				<div class="answer">
 					<h5>What’s the difference between Free and Premium?</h5>
@@ -98,12 +98,12 @@
 </div>
 </div>
 
+<!--
 <div class="newsletter">
 	<div class="bg"></div>
 	<div class="inner">
 		<h6>Följ &nbsp;stockholm continental<br><span>Prenumerera på vårt nyhetsbrev</span></h6>
 
-		<!-- Begin MailChimp Signup Form -->
 		<div id="mc_embed_signup">
 			<form action="http://stockholmcontinental.us8.list-manage.com/subscribe/post?u=d48c2bbec503e07bdbb1ec22f&amp;id=1e1028eb27" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<input type="submit" value="Anmäl mig" name="subscribe" id="mc-embedded-subscribe" class="button">
@@ -113,55 +113,53 @@
 					<div class="response" id="mce-error-response" style="display:none"></div>
 					<div class="response" id="mce-success-response" style="display:none"></div>
 				</div>
-				<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 			 	<div style="position: absolute; left: -5000px;"><input type="text" name="b_d48c2bbec503e07bdbb1ec22f_1e1028eb27" value=""></div>
 			</form>
 		</div>
-		<!--End mc_embed_signup-->
 	</div>
 
 </div>
+-->
 
 <div class="newsletter">
-    <form id="form1" runat="server" class="validate" target="_blank" novalidate>
-        <asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Auto"></asp:ScriptManager>
-        <asp:UpdateProgress ID="UpdateProgress1" DisplayAfter="10" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
-            <ProgressTemplate>
-                <div class="progressOverlay">            
-	                <asp:Label ID="lblWait" runat="server" Text="Skickar..." />
-                </div>
-            </ProgressTemplate>
-        </asp:UpdateProgress>
-    	<div class="bg"></div>
-	    <div class="inner">
-		<h6>Följ &nbsp;stockholm continental<br><span>Prenumerera på vårt nyhetsbrev</span></h6>
+	<form id="form1" runat="server" class="validate" target="_blank" novalidate>
 
-		<!-- Begin Signup Form -->
-		<div id="mc_embed_signup">
+		<asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Auto"></asp:ScriptManager>
+		<asp:UpdateProgress ID="UpdateProgress1" DisplayAfter="10" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+			<ProgressTemplate>
+				<div class="progressOverlay">
+					<asp:Label ID="lblWait" runat="server" Text="Skickar..." />
+				</div>
+			</ProgressTemplate>
+		</asp:UpdateProgress>
 
-		<asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
-                <asp:Panel ID="signUpForm" runat="server">
-                    <asp:Label ID="exError" runat="server" Text="" Visible="false"></asp:Label>
-                    <asp:Button ID="btnSubscribe" runat="server" Text="Anmäl mig" name="subscribe" class="button" OnClick="btnSubscribe_Click" />
-                    <asp:TextBox ID="tbEmail" type="email" value="" placeholder="Din epostadress" name="EMAIL" class="required email" runat="server"></asp:TextBox>
-				    <label for="tbEmail">Din epostadress <span class="asterisk">*</span> </label>
-                    <div id="mce-responses" class="clear">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en e-postaderss" ControlToValidate="tbEmail" CssClass="errormsg" Display="Dynamic"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="E-postadressen är inte korrekt" ControlToValidate="tbEmail" CssClass="errormsg" SetFocusOnError="False" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
-				    </div>
-                </asp:Panel>
-                <asp:Panel ID="signUpResponse" runat="server" Visible="false">
-                    <h4>Tack för din anmälan!</h4>
-                    <p>Du kommer få ett mail när vi har mer att berätta.</p>
-                </asp:Panel>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-
-            
-		</div>
-
+		<div class="bg"></div>
+		<div class="inner">
+			<h6>Följ &nbsp;stockholm continental<br><span>Prenumerera på vårt nyhetsbrev</span></h6>
+			<!-- Begin Signup Form -->
+			<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+				<ContentTemplate>
+					<asp:Panel ID="signUpForm" runat="server">
+						<asp:Label ID="exError" runat="server" Text="" Visible="false"></asp:Label>
+						<asp:Button ID="btnSubscribe" runat="server" Text="Anmäl mig" name="subscribe" class="button" OnClick="btnSubscribe_Click" />
+						<asp:TextBox ID="tbEmail" type="email" value="" placeholder="Din epostadress" name="EMAIL" class="required email" runat="server"></asp:TextBox>
+						<label for="tbEmail">Din epostadress <span class="asterisk">*</span> </label>
+												
+						<div id="mce-responses" class="clear">
+							<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en e-postaderss" ControlToValidate="tbEmail" CssClass="errormsg" Display="Dynamic"></asp:RequiredFieldValidator>
+							<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="E-postadressen är inte korrekt" ControlToValidate="tbEmail" CssClass="errormsg" SetFocusOnError="False" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
+						</div>
+					</asp:Panel>
+					<asp:Panel ID="signUpResponse" runat="server" Visible="false">
+						<div class="response">
+							<h6>Tack för din anmälan!<br>
+								<span>Du kommer få ett mail när vi har mer att berätta.</span>
+							</h6>
+						</div>
+					</asp:Panel>
+				</ContentTemplate>
+			</asp:UpdatePanel>
 	</div>
-	</form>
 
+	</form>
 </div>

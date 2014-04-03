@@ -449,14 +449,18 @@ p.ingress {
 		background: linear-gradient(to top, #004494 0%, #1fbae9 100%);
 		-webkit-transition: 0.5s all;
 		transition: 0.5s all;
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
 		opacity: 0.9;
 		ul {
 			padding: 10px 0;
 		}
 		li {
 			list-style: none;
-			padding: 10px 0;
-			span {
+			a {
+				padding: 10px 0;
+				display: block;
 				color: #FFF;
 				font-size: 18px;
 				text-transform: uppercase;
@@ -466,9 +470,9 @@ p.ingress {
 			}
 		}
 		&.active {
-			-webkit-transform: translateY(400px);
-			-ms-transform: translateY(400px);
-			transform: translateY(400px);
+			-webkit-transform: translate3d(0,400px,0);
+			-ms-transform: translate3d(0,400px,0);
+			transform: translate3d(0,400px,0);
 		}
 	}
 }
@@ -1896,6 +1900,10 @@ blockquote {
 			}
 		}
 	}
+	.response {
+		text-align: right;
+		float: right;
+	}
 }
 
 .no-placeholder .newsletter label {
@@ -1910,16 +1918,20 @@ blockquote {
 		}
 		.inner {
 			width: 660px;
-			padding-bottom: 50px;
-			padding-top: 50px;
+			padding: 50px 0;
 		}
 		h6 {
 			width: 100%;
-			margin-bottom: 20px;
+			float: none;
 		}
 		input#mce-EMAIL {
 			float: none;
 			width: 510px;
+		}
+		.response {
+			margin-top: 20px;
+			float: none;
+			text-align: left;
 		}
 	}
 }
@@ -1927,18 +1939,8 @@ blockquote {
 
 @media only screen and (max-width: 768px) {
 	.newsletter {
-		height: auto;
-		.bg {
-			height: 100%;
-		}
 		.inner {
 			width: 80%;
-			padding-bottom: 103px;
-			padding-top: 50px;
-		}
-		h6 {
-			width: 100%;
-			margin-bottom: 20px;
 		}
 		input#mce-EMAIL {
 			float: none;

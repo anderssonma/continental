@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$('.mobile-nav-btn, .mobile-nav li').on('click', function() {
+	$('.mobile-nav-btn, .mobile-nav li a').on('click', function() {
 		$('.mobile-nav, .mobile-nav-btn').toggleClass('active');
 	});
 
