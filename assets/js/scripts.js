@@ -30,7 +30,7 @@ $(document).ready(function() {
 	if (hasFlashSupport()) {
 		$('#today .today').addClass('has-flash');
 	} else {
-		$('#today .today-text').text('FLASH SAKNAS!');
+		$('#today .today-text').text('Flash saknas!').addClass('warning');
 	}
 
 	var desktopInit = function() {

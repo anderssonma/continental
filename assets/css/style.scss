@@ -1191,6 +1191,8 @@ blockquote {
 			z-index: 3;
 			text-transform: uppercase;
 			letter-spacing: 1px;
+			-webkit-transition: 0.35s all;
+			transition: 0.35s all;
 			&:before {
 				content: '';
 				position: absolute;
@@ -1203,6 +1205,14 @@ blockquote {
 				border-right: 6px solid transparent;
 				border-left: 6px solid transparent;
 				border-bottom: 6px solid #008fcc;
+				-webkit-transition: 0.35s all;
+				transition: 0.35s all;
+			}
+			&.warning {
+				background: #FF5700;
+				&:before {
+					border-bottom-color: #FF5700;
+				}
 			}
 		}
 	}
