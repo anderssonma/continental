@@ -55,6 +55,12 @@
 	-webkit-transition: 0.35s all;
 	transition: 0.35s all;
 	opacity: 0.5;
+	img.png {
+		display: none;
+	}
+	img.svg {
+		width: 130px;
+	}
 }
 .logo:hover {
 	opacity: 1;
@@ -64,6 +70,15 @@
 	top: -30px;
 	-webkit-transition: 0.35s 0.15s all;
 	transition: 0.35s 0.15s all;
+}
+
+.no-svg .logo {
+	img.png {
+		display: block;
+	}
+	img.svg {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 768px) {

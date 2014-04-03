@@ -200,6 +200,9 @@ p.ingress {
 		img {
 			display: inline-block;
 		}
+		img.png {
+			display: none;
+		}
 		strong {
 			display: block;
 			margin-top: 4px;
@@ -209,6 +212,15 @@ p.ingress {
 			border: none;
 			border-bottom: 1px solid #FFF;
 		}
+	}
+}
+
+.no-svg .intro-bg .box-header {
+	img.png {
+		display: inline-block;
+	}
+	img.svg {
+		display: none;
 	}
 }
 
@@ -1968,6 +1980,9 @@ footer {
 			&:hover {
 				opacity: 0.75;
 			}
+			&.png {
+				display: none;
+			}
 		}
 		.jernhusen {
 			width: 130px;
@@ -1990,6 +2005,15 @@ footer {
 			padding-top: 24px;
 			display: inline-block;
 		}
+	}
+}
+
+.no-svg footer .logos {
+	img.png {
+		display: block;
+	}
+	img.svg {
+		display: none;
 	}
 }
 
