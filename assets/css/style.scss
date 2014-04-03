@@ -1859,7 +1859,7 @@ blockquote {
 	}
 	label {
 		position: absolute;
-		top: 154px;
+		top: 70px;
 		left: 474px;
 		color: #FFF;
 		display: none;
@@ -1870,7 +1870,7 @@ blockquote {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		border-radius: 0;
-		&#mce-EMAIL {
+		&#tbEmail {
 			background: #F8F8F8;
 			border: none;
 			padding: 12px 20px;
@@ -1900,15 +1900,49 @@ blockquote {
 			}
 		}
 	}
+
+	// ASPX FORM STYLES
 	.response {
 		text-align: right;
 		float: right;
+	}
+	.progressOverlay{
+		position: absolute;
+		background: url(assets/img/newsletter_bg_alt.jpg) 
+		no-repeat center;
+		z-index: 3;
+		overflow: hidden;
+		text-align: center; 
+		top: 0; 
+		left: 0;
+		height: 100%;
+		width: 100%;
+		padding-top:100px;
+	}
+	.input-box {
+		float: right;
+	}
+	.input-box input {
+		float: left !important;
+	}
+	#mce-responses {
+		float: right;
+		width: 486px;
+		padding-top: 10px;
+	}
+	#mce-responses span {
+		-webkit-font-smoothing: antialiased;
+		-mos-osx-font-smoothing: grayscale;
+		color: #FFF !important;
+		font-weight: bold;
+		padding-top: 10px;
 	}
 }
 
 .no-placeholder .newsletter label {
 	display: block;
 }
+
 
 @media only screen and (max-width: 1100px) {
 	.newsletter {
@@ -1933,6 +1967,16 @@ blockquote {
 			float: none;
 			text-align: left;
 		}
+		// ASPX FORM
+		.input-box {
+			float: none;
+			margin-top: 20px;
+			overflow: hidden;
+		}
+		#mce-responses {
+			float: none;
+			width: auto;
+		}
 	}
 }
 
@@ -1951,6 +1995,14 @@ blockquote {
 			left: 0;
 			bottom: 50px;
 			height: 43px;
+		}
+		// ASPX FORM
+		.input-box #tbEmail {
+			width: 100% !important;
+		}
+		.input-box input[type="submit"] {
+			position: static !important;
+			margin-top: 10px;
 		}
 	}
 }

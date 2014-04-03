@@ -128,7 +128,8 @@
 		<asp:UpdateProgress ID="UpdateProgress1" DisplayAfter="10" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
 			<ProgressTemplate>
 				<div class="progressOverlay">
-					<asp:Label ID="lblWait" runat="server" Text="Skickar..." />
+					<div id="imagelightbox-loading" style="position: absolute;"><div></div></div>
+					<!-- <asp:Label ID="lblWait" runat="server" Text="Skickar..." /> -->
 				</div>
 			</ProgressTemplate>
 		</asp:UpdateProgress>
@@ -141,12 +142,13 @@
 				<ContentTemplate>
 					<asp:Panel ID="signUpForm" runat="server">
 						<asp:Label ID="exError" runat="server" Text="" Visible="false"></asp:Label>
-						<asp:Button ID="btnSubscribe" runat="server" Text="Anmäl mig" name="subscribe" class="button" OnClick="btnSubscribe_Click" />
-						<asp:TextBox ID="tbEmail" type="email" value="" placeholder="Din epostadress" name="EMAIL" class="required email" runat="server"></asp:TextBox>
-						<label for="tbEmail">Din epostadress <span class="asterisk">*</span> </label>
-												
+						<label for="tbEmail">Din epostadress <span class="asterisk">*</span></label>
+						<div class="input-box">
+							<asp:TextBox ID="tbEmail" type="email" value="" placeholder="Din epostadress" name="EMAIL" class="required email" runat="server"></asp:TextBox>
+							<asp:Button ID="btnSubscribe" runat="server" Text="Anmäl mig" name="subscribe" class="button" OnClick="btnSubscribe_Click" />
+						</div>
 						<div id="mce-responses" class="clear">
-							<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en e-postaderss" ControlToValidate="tbEmail" CssClass="errormsg" Display="Dynamic"></asp:RequiredFieldValidator>
+							<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en e-postadress" ControlToValidate="tbEmail" CssClass="errormsg" Display="Dynamic"></asp:RequiredFieldValidator>
 							<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="E-postadressen är inte korrekt" ControlToValidate="tbEmail" CssClass="errormsg" SetFocusOnError="False" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
 						</div>
 					</asp:Panel>
