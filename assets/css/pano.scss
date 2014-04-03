@@ -55,11 +55,13 @@
 	-webkit-transition: 0.35s all;
 	transition: 0.35s all;
 	opacity: 0.5;
+	display: block;
 	img.png {
 		display: none;
 	}
 	img.svg {
 		width: 130px;
+		height: 31px;
 	}
 }
 .logo:hover {

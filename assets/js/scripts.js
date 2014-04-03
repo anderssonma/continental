@@ -6,7 +6,36 @@ $(document).ready(function() {
 
 	$('.site-nav a').smoothScroll();
 
-	console.log(Modernizr);
+	var hasFlashSupport = function() {
+		if (window.ActiveXObject) {
+			try {
+				new ActiveXObject(pluginList[p].activex);
+				return true;
+			} catch(e) {
+				return false;
+			}
+		} else {
+			if (!navigator.hasOwnProperty('plugins') || navigator.plugins.length <= 0) {
+				return false;
+			}
+			var bool;
+			$.each(navigator.plugins, function() {
+				if (this.name.match(/flash/gim)) {
+					bool = true;
+					return false;
+				} else {
+					bool = false;
+				}
+			});
+			return bool;
+		}
+	};
+
+	if (hasFlashSupport()) {
+		$('#today .today').addClass('has-flash');
+	} else {
+		$('#today .today-text').text('FLASH SAKNAS!');
+	}
 
 	var desktopInit = function() {
 

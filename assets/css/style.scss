@@ -407,23 +407,34 @@ p.ingress {
 			margin: 3px auto;
 			background: linear-gradient(to left, #004494 0%, #1fbae9 100%);
 			-webkit-transition: 0.35s all;
+			transition: 0.35s all;
 		}
 		.line-top {
 			-webkit-transform-origin: top left;
+			-ms-transform-origin: top left;
+			transform-origin: top left;
 		}
 		.line-bot {
 			-webkit-transform-origin: bottom left;
+			-ms-transform-origin: bottom left;
+			transform-origin: bottom left;
 		}
 		&.active {
 			.line-top {
 				-webkit-transform: rotate(45deg) translateX(3px) translateY(-6px);
+				-ms-transform: rotate(45deg) translateX(3px) translateY(-6px);
+				transform: rotate(45deg) translateX(3px) translateY(-6px);
 			}
 			.line-mid {
 				-webkit-transform: scale(0);
+				-ms-transform: scale(0);
+				transform: scale(0);
 				opacity: 0;
 			}
 			.line-bot {
 				-webkit-transform: rotate(-45deg) translateX(3px) translateY(6px);
+				-ms-transform: rotate(-45deg) translateX(3px) translateY(6px);
+				transform: rotate(-45deg) translateX(3px) translateY(6px);
 			}
 		}
 	}
@@ -1224,6 +1235,9 @@ blockquote {
 			-webkit-transition: 0.35s 0.35s all;
 			transition: 0.35s 0.35s all;
 			z-index: 2;
+			&.png {
+				display: none;
+			}
 		}
 		.today-time {
 			position: absolute;
@@ -1232,12 +1246,14 @@ blockquote {
 			width: 100px;
 			margin-left: -50px;
 			background: #FFF;
-			-webkit-transition: 0.35s bottom;
-			transition: 0.35s bottom;
 			padding: 3px 0 5px;
 			border-radius: 3px;
 			color: #555;
 			z-index: 4;
+		}
+		&.has-flash .today-time {
+			-webkit-transition: 0.35s bottom;
+			transition: 0.35s bottom;
 		}
 		object {
 			position: absolute;
@@ -1245,7 +1261,7 @@ blockquote {
 			left: 50%;
 			margin: -270px 0 0 -335px;
 		}
-		&:hover {
+		&.has-flash:hover {
 			width: 600px;
 			height: 430px;
 			right: -300px;
@@ -1275,6 +1291,15 @@ blockquote {
 				z-index: 3;
 			}
 		}
+	}
+}
+
+.no-svg .timeline .today {
+	img.png {
+		display: block;
+	}
+	img.svg {
+		display: none;
 	}
 }
 
@@ -1625,6 +1650,9 @@ blockquote {
 	img {
 		width: 40px;
 		margin: 23px 0 0 23px;
+		&.png {
+			display: none;
+		}
 	}
 	.meta {
 		width: 230px;
@@ -1657,6 +1685,15 @@ blockquote {
 		color: $text-dark-alt;
 		-webkit-transition: 0.35s all;
 		transition: 0.35s all;
+	}
+}
+
+.no-svg .file {
+	img.png {
+		display: block;
+	}
+	img.svg {
+		display: none;
 	}
 }
 
@@ -1781,13 +1818,15 @@ blockquote {
 	width: 100%;
 	height: 240px;
 	background: linear-gradient(to right, #004494 0%, #1fbae9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#004494', endColorstr='#1fbae9');
+	zoom: 1;
 	.bg {
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 240px;
 		width: 100%;
-		background: url(img/newsletter_bg.jpg) no-repeat center;
+		background: url(img/newsletter_bg_alt.jpg) no-repeat center;
 		background-size: cover;
 		z-index: 1;
 		opacity: 0.5;

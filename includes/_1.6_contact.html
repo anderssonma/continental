@@ -25,14 +25,20 @@
 		<div class="downloads">
 			<h4>Ladda ner</h4>
 			<a href="assets/downloads/SC_exterior.zip" class="file">
-				<div class="preview"><img src="<!-- @path icon_cloud.png -->"></div>
+				<div class="preview">
+					<img class="svg" src="<!-- @path icon_arrow.svg -->">
+					<img class="png" src="<!-- @path icon_cloud.png -->">
+				</div>
 				<div class="meta">
 					<h5>Bilder exteriör<span>45.6 mb</span></h5>
 					<p>Exteriörbilder i full storlek</p>
 				</div>
 			</a>
 			<a href="assets/downloads/SC_interior.zip" class="file">
-				<div class="preview"><img src="<!-- @path icon_cloud.png -->"></div>
+				<div class="preview">
+					<img class="svg" src="<!-- @path icon_arrow.svg -->">
+					<img class="png" src="<!-- @path icon_cloud.png -->">
+				</div>
 				<div class="meta">
 					<h5>Bilder interiör<span>31.1 mb</span></h5>
 					<p>Interiörbilder i full storlek</p>
@@ -113,5 +119,49 @@
 		</div>
 		<!--End mc_embed_signup-->
 	</div>
+
+</div>
+
+<div class="newsletter">
+    <form id="form1" runat="server" class="validate" target="_blank" novalidate>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" ScriptMode="Auto"></asp:ScriptManager>
+        <asp:UpdateProgress ID="UpdateProgress1" DisplayAfter="10" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+            <ProgressTemplate>
+                <div class="progressOverlay">            
+	                <asp:Label ID="lblWait" runat="server" Text="Skickar..." />
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+    	<div class="bg"></div>
+	    <div class="inner">
+		<h6>Följ &nbsp;stockholm continental<br><span>Prenumerera på vårt nyhetsbrev</span></h6>
+
+		<!-- Begin Signup Form -->
+		<div id="mc_embed_signup">
+
+		<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:Panel ID="signUpForm" runat="server">
+                    <asp:Label ID="exError" runat="server" Text="" Visible="false"></asp:Label>
+                    <asp:Button ID="btnSubscribe" runat="server" Text="Anmäl mig" name="subscribe" class="button" OnClick="btnSubscribe_Click" />
+                    <asp:TextBox ID="tbEmail" type="email" value="" placeholder="Din epostadress" name="EMAIL" class="required email" runat="server"></asp:TextBox>
+				    <label for="tbEmail">Din epostadress <span class="asterisk">*</span> </label>
+                    <div id="mce-responses" class="clear">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Fyll i en e-postaderss" ControlToValidate="tbEmail" CssClass="errormsg" Display="Dynamic"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="E-postadressen är inte korrekt" ControlToValidate="tbEmail" CssClass="errormsg" SetFocusOnError="False" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
+				    </div>
+                </asp:Panel>
+                <asp:Panel ID="signUpResponse" runat="server" Visible="false">
+                    <h4>Tack för din anmälan!</h4>
+                    <p>Du kommer få ett mail när vi har mer att berätta.</p>
+                </asp:Panel>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+            
+		</div>
+
+	</div>
+	</form>
 
 </div>
